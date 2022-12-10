@@ -1,7 +1,7 @@
 function About() {
     return (
-        <section className="p-2">
-                        <h2>Lorem ipsum</h2>
+        <section id="about" className="p-2">
+                        <h2>About</h2>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus molestiae commodi doloremque fugiat tempora officia aut nesciunt, quae, nisi tenetur, repellat suscipit! Vel beatae ea consequuntur laboriosam in, adipisci exercitationem.
                         Incidunt quo dolor cumque odit modi mollitia sint non deleniti officiis! Similique vero aspernatur earum eligendi laborum distinctio corrupti, possimus veritatis modi nihil impedit delectus tempore omnis rerum voluptatum optio?
                         Reprehenderit, non voluptatum. Officiis sequi in eos eum obcaecati est dolor molestias assumenda suscipit? Modi, possimus repudiandae, atque suscipit eligendi, nesciunt incidunt accusamus libero expedita voluptas earum officiis corrupti iusto.

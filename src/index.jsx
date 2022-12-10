@@ -1,21 +1,25 @@
-import { useState } from 'react'
-import About from './components/about'
-import Contact from './components/contact'
-import Navbar from './components/navbar'
-import Projects from './components/projects'
+import { useState } from "react";
+import About from "./components/about";
+import Contact from "./components/contact";
+import Navbar from "./components/navbar";
+import Projects from "./components/projects";
 
-import './index.css'
+import "./index.css";
 
 function Index() {
-  /**          <About />
-          <Contact /> */
+  /**          */
   return (
-    <div className="App">
-          <Navbar />
-          <Projects />
-
-    </div>
-  )
+    <>
+      <header className="sticky inset-0">
+        <Navbar />
+      </header>
+      <main>
+        <About />
+        <Projects />
+        <Contact />
+      </main>
+    </>
+  );
 }
 
-export default Index
+export default Index;
