@@ -48,30 +48,28 @@ function Projects() {
   const projectsList = ProjectDB.map((item) => {
     return (
       <div
-        className="grid grid-cols-[fit-content,1fr] grid-rows-[2rem,1fr] divide-solid divide-y divide-slate-200"
+        className="grid grid-cols-[fit-content,1fr] grid-rows-[2rem,1fr] border border-solid border-black mb-2 rounded-sm"
         key={item.id}
       >
-        <img
-          src={item.projectPic}
-          alt="..."
-          className="max-h-44 max-w-xs col-start-1 col-end-2 row-start-1 row-span-2"
-        />
+        <div className="col-start-1 col-end-2 row-start-1 row-span-2 w-40 border-r border-solid border-black p-1">
+          <img src={item.projectPic} alt="..." />
+        </div>
         <a
           href={item.projectLink}
           target="_blank"
           rel="external"
-          className="col-start-2 row-start-1"
+          className="col-start-2 row-start-1 p-1"
         >
-          <h2>{item.projectName}</h2>
+          <h2 className="font-bold text-slate-700">{item.projectName}</h2>
         </a>
-        <p className="col-start-2 row-start-2">{item.projectDesc}</p>
+        <p className="col-start-2 row-start-2 border-t border-solid border-black p-1">{item.projectDesc}</p>
       </div>
     );
   });
 
   return (
     <section id="projects" className="p-2 bg-white">
-      <h1>Projects</h1>
+      <h1 className="font-bold text-lg">Projects</h1>
       <div id="projectsList">{projectsList}</div>
     </section>
   );

@@ -87,7 +87,7 @@ function ContactForm() {
 function Contact() {
   return (
     <section id="contact" className="p-2 bg-white">
-      <h2>Contact</h2>
+      <h2 className="font-bold text-lg">Contact</h2>
       <Socials />
       <ContactForm />
     </section>
