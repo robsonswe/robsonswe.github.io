@@ -1,76 +1,60 @@
-const loremIpsum =
-  "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quia repudiandae voluptatibus nobis aspernatur fugiat tempore dolore! Hic, beatae? Quae at nihil eum delectus laboriosam repudiandae. Doloribus, molestias. Minima, ad quos!";
-
-const placeholderPic =
-  "https://upload.wikimedia.org/wikipedia/commons/3/3f/Placeholder_view_vector.svg";
-
-const ProjectDB = [
-  {
-    id: 0,
-    projectName: "Sketchpage",
-    projectLink: "https://github.com/ROSS1996/sketchpage",
-    projectDesc: loremIpsum,
-    projectPic:
-      "https://github.com/ROSS1996/sketchpage/raw/main/screenshot.png",
-  },
-  {
-    id: 1,
-    projectName: "Web Calculator",
-    projectLink: "https://github.com/ROSS1996/web-calculator",
-    projectDesc: loremIpsum,
-    projectPic: placeholderPic,
-  },
-  {
-    id: 2,
-    projectName: "Rock, Paper, Scissors",
-    projectLink: "https://github.com/ROSS1996/rps-game",
-    projectDesc: loremIpsum,
-    projectPic: "https://github.com/ROSS1996/rps-game/raw/main/screenshot.png",
-  },
-  {
-    id: 3,
-    projectName: "Landing Page Template #1",
-    projectLink: "https://github.com/ROSS1996/lpage-template1",
-    projectDesc: loremIpsum,
-    projectPic:
-      "https://github.com/ROSS1996/lpage-template1/raw/main/screenshot.jpeg",
-  },
-  {
-    id: 4,
-    projectName: "Register Page Template #1",
-    projectLink: "https://github.com/ROSS1996/regpage",
-    projectDesc: loremIpsum,
-    projectPic: placeholderPic,
-  },
-];
+import { useState, useEffect } from "react";
+import { db } from "../firebasecfg";
+import { collection, getDocs } from "@firebase/firestore";
 
 function Projects() {
-  const projectsList = ProjectDB.map((item) => {
-    return (
-      <div
-        className="grid grid-cols-[fit-content,1fr] grid-rows-[2rem,1fr] border border-solid border-black mb-2 rounded-sm"
-        key={item.id}
-      >
-        <div className="col-start-1 col-end-2 row-start-1 row-span-2 w-40 border-r border-solid border-black p-1">
-          <img src={item.projectPic} alt="..." />
-        </div>
-        <a
-          href={item.projectLink}
-          target="_blank"
-          rel="external"
-          className="col-start-2 row-start-1 p-1"
+  const [fireProjects, setFireProjects] = useState([]);
+  const projectsRef = collection(db, "projects");
+  useEffect(() => {
+    const getProjects = async () => {
+      const data = await getDocs(projectsRef);
+      setFireProjects(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+    getProjects();
+  }, []);
+
+  const projectsList = fireProjects.map((item) => {
+    if (item.screenshot) {
+      return (
+        <div
+          className="grid grid-cols-2 grid-rows-[1fr 1fr 10px 10px] border border-solid border-black mb-2 rounded-sm w-80"
+          key={item.id}
         >
-          <h2 className="font-bold text-slate-700">{item.projectName}</h2>
-        </a>
-        <p className="col-start-2 row-start-2 border-t border-solid border-black p-1">{item.projectDesc}</p>
-      </div>
-    );
+          <div className="col-start-1 col-end-3 row-start-1 row-end-1  border-solid border-black p-1 place-self-center">
+            <img src={item.screenshot} className="h-60 aspect-auto" alt="..." />
+          </div>
+
+          <h2 className="col-start-1 col-span-2 row-start-2 row-end-2 p-1 font-bold text-slate-700 text-center border-t">
+            {item.name}
+          </h2>
+
+          <p className="col-start-1 col-span-2 row-start-3 row-end-3 border-t border-solid border-black p-1 text-center">
+            {item.description}
+          </p>
+          <p className="col-start-1 row-start-4 row-end-4 border-t border-solid border-black border-r p-1 text-center font-semibold">
+            <a href={item.github} target="_blank" rel="external" className="">
+              Github
+            </a>
+          </p>
+          <p className="col-start-2 col-end-3 row-start-4 row-end-4 border-t border-solid border-black p-1 text-center font-semibold">
+            <a href={item.preview} target="_blank" rel="external" className="">
+              Live Version
+            </a>
+          </p>
+        </div>
+      );
+    }
   });
 
   return (
     <section id="projects" className="p-2 bg-white">
       <h1 className="font-bold text-lg">Projects</h1>
-      <div id="projectsList">{projectsList}</div>
+      <div
+        id="projectsList"
+        className="grid gap-4 xs:grid-cols-2 xs:p-8 md:grid-cols-4 lg:gap-6 p-1"
+      >
+        {projectsList}
+      </div>
     </section>
   );
 }
