@@ -1,12 +1,13 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import About from "./components/about";
 import Contact from "./components/contact";
 import Navbar from "./components/navbar";
 import Projects from "./components/projects";
+import { inject } from "@vercel/analytics";
 
 import "./index.css";
 
 function Index() {
+  inject();
   /**          */
   return (
     <>
