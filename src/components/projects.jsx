@@ -51,7 +51,7 @@ function Projects() {
       <h1 className="font-bold text-lg">Projects</h1>
       <div
         id="projectsList"
-        className="grid gap-4 xs:grid-cols-2 xs:p-8 md:grid-cols-4 lg:gap-6 p-1"
+        className="grid gap-4 xs:grid-cols-2 xs:p-8 md:grid-cols-4 lg:gap-6 p-3"
       >
         {projectsList}
       </div>
