@@ -1,17 +1,14 @@
-import { useState, useEffect } from "react";
-import { db } from "../firebasecfg";
-import { collection, getDocs } from "@firebase/firestore";
+const fireProjects = [
+    {
+        id: 1,
+        name: '#',
+        description: '#',
+        github: '#',
+        preview: '#',
+    }
+]
 
 function Projects() {
-  const [fireProjects, setFireProjects] = useState([]);
-  const projectsRef = collection(db, "projects");
-  useEffect(() => {
-    const getProjects = async () => {
-      const data = await getDocs(projectsRef);
-      setFireProjects(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
-    };
-    getProjects();
-  }, []);
 
   const projectsList = fireProjects.map((item) => {
     if (item.screenshot) {
