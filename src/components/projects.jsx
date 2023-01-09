@@ -29,12 +29,12 @@ function Projects() {
             {item.description}
           </p>
           <p className="col-start-1 row-start-4 row-end-4 border-t border-solid border-black border-r p-1 text-center font-semibold">
-            <a href={item.github} target="_blank" rel="external" className="">
+            <a href={item.github} target="_blank" rel="noreferrer" className="">
               Github
             </a>
           </p>
           <p className="col-start-2 col-end-3 row-start-4 row-end-4 border-t border-solid border-black p-1 text-center font-semibold">
-            <a href={item.preview} target="_blank" rel="external" className="">
+            <a href={item.preview} target="_blank" rel="noreferrer" className="">
               Live Version
             </a>
           </p>

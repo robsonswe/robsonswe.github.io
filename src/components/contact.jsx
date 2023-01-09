@@ -7,13 +7,13 @@ function Socials() {
             <a
               href="http://linkedin.com/in/robsonossantana/"
               target="_blank"
-              rel="external"
+              rel="noreferrer"
             >
               <i className="bi bi-linkedin"></i> LinkedIn
             </a>
           </li>
           <li>
-            <a href="https://github.com/ROSS1996" target="_blank" rel="external">
+            <a href="https://github.com/ROSS1996" target="_blank" rel="noreferrer">
               <i className="bi bi-github"></i> Github
             </a>
           </li>
