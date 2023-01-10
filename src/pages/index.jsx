@@ -13,10 +13,10 @@ import Skills from '../components/skills'
 
 export default function Home() {
   return (
-    <>
-    <PageHead pageTitle='Portfolio' />
-    <header className={`sticky inset-0 ${mavenpro.className}`}>
-        <Navbar  />
+    <div>
+      < PageHead pageTitle='Robson Santana' />
+      <header className={`sticky inset-0 ${mavenpro.className} z-10`}>
+        <Navbar />
       </header>
       <main>
         <About />
@@ -24,6 +24,6 @@ export default function Home() {
         <Projects />
         <Contact />
       </main>
-    </>
+    </div>
   )
 }

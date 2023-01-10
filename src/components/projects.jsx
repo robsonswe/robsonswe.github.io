@@ -1,19 +1,19 @@
 const fireProjects = [
-    {
-        id: 1,
-        name: 'Social Media Dashboard',
-        description: 'Social Media Dashboard with Theme Selector',
-        github: 'https://github.com/ROSS1996/frontend-projects/tree/main/smdt-junior',
-        preview: 'https://ross1996.github.io/frontend-projects/smdt-junior',
-        screenshot: 'https://ross1996.github.io/frontend-projects/screenshots/smdt-junior.jpeg'
-    },
-    {
-      id: 2,
-      name: 'Interactive card details',
-      description: 'Interactive credit card page',
-      github: 'https://github.com/ROSS1996/frontend-projects/tree/main/icdf-junior',
-      preview: 'https://ross1996.github.io/frontend-projects/icdf-junior',
-      screenshot: 'https://ross1996.github.io/frontend-projects/screenshots/icdf-junior.jpeg'
+  {
+    id: 1,
+    name: 'Social Media Dashboard',
+    description: 'Social Media Dashboard with Theme Selector',
+    github: 'https://github.com/ROSS1996/frontend-projects/tree/main/smdt-junior',
+    preview: 'https://ross1996.github.io/frontend-projects/smdt-junior',
+    screenshot: 'https://ross1996.github.io/frontend-projects/screenshots/smdt-junior.jpeg'
+  },
+  {
+    id: 2,
+    name: 'Interactive card details',
+    description: 'Interactive credit card page',
+    github: 'https://github.com/ROSS1996/frontend-projects/tree/main/icdf-junior',
+    preview: 'https://ross1996.github.io/frontend-projects/icdf-junior',
+    screenshot: 'https://ross1996.github.io/frontend-projects/screenshots/icdf-junior.jpeg'
   }
 ]
 
@@ -53,7 +53,7 @@ function Projects() {
   });
 
   return (
-    <section id="projects" className="p-2 bg-white">
+    <section id="projects" className=" bg-white ml-2">
       <h1 className="font-bold text-lg">Projects</h1>
       <div
         id="projectsList"

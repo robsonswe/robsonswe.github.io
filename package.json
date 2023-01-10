@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@next/font": "^13.1.1",
-    "bootstrap-icons": "^1.10.3",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
     "next": "^13.1.1",
