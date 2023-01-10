@@ -4,6 +4,7 @@ import {
     HtmlLogo,
     CssLogo,
     JSlogo,
+    TypesriptLogo,
     ReactLogo,
     NextLogo,
     ReduxLogo,
@@ -38,6 +39,10 @@ export default function Skills() {
                         <div className='flex flex-col items-center justify-between'>
                             < JSlogo size={'1.75rem'} color={iconsColor} />
                             <div className='text-xs'>Javascript</div>
+                        </div>
+                        <div className='flex flex-col items-center justify-between'>
+                            < TypesriptLogo size={'1.75rem'} color={iconsColor} />
+                            <div className='text-xs'>Typescript</div>
                         </div>
                         <div className='flex flex-col items-center justify-between'>
                             < ReactLogo size={'1.75rem'} color={iconsColor} />

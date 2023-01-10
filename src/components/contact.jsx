@@ -8,7 +8,7 @@ function Contact() {
         <li className='p-4 bg-slate-200 w-fit border border-black rounded-md'>
           <a href="mailto://robsonlvr76@gmail.com" className='flex flex-col items-center gap-1'>
             <EnvelopeAtFill className='inline' />
-            Github
+            Email
           </a>
         </li>
         <li className='p-4 bg-slate-200 w-fit border border-black rounded-md'>
