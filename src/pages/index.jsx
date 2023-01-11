@@ -1,8 +1,3 @@
-
-import { Maven_Pro } from '@next/font/google'
-
-const mavenpro = Maven_Pro({ subsets: ['latin'] })
-
 import PageHead from "../components/head"
 import Navbar from "../components/navbar"
 import About from "../components/about"
@@ -13,17 +8,17 @@ import Skills from '../components/skills'
 
 export default function Home() {
   return (
-    <div>
+    <div className='flex flex-row h-screen overflow-hidden bg-quaternary text-secondary font-ruda'>
       < PageHead pageTitle='Robson Santana' />
-      <header className={`sticky inset-0 ${mavenpro.className} z-10`}>
+      <header className='w-2/6'>
         <Navbar />
       </header>
-      <main>
+      <main className='overflow-y-auto scroll-smooth p-6 flex flex-col gap-6 font-outfit'>
         <About />
         < Skills />
         <Projects />
         <Contact />
       </main>
-    </div>
+    </div >
   )
 }

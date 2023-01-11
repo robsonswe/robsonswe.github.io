@@ -1,27 +1,26 @@
-import { Github, Linkedin, EnvelopeAtFill } from 'react-bootstrap-icons';
+import { Github, Linkedin } from 'react-bootstrap-icons';
 
 function Contact() {
   return (
-    <section id="contact" className="p-2 bg-white ml-2">
-      <h2 className="font-bold text-lg">Contact</h2>
-      <ul className="flex flex-row gap-4 p-2">
-        <li className='p-4 bg-slate-200 w-fit border border-black rounded-md'>
-          <a href="mailto://robsonlvr76@gmail.com" className='flex flex-col items-center gap-1'>
-            <EnvelopeAtFill className='inline' />
-            Email
+    <section id="contact" className="ml-2 mb-1">
+      <h2 className="font-bold text-2xl">Contact</h2>
+      <div className='bg-quinternary w-96 justify-between h-56 flex flex-col p-8 rounded-md mt-1'>
+        <div>
+          <h1 className='font-bold text-lg'>Robson O. S. de Santana</h1>
+          <h2 className='font-semibold'>Web Developer</h2>
+          <a href="mailto://email@example.com">
+            <p className='font-thin hover:underline cursor-pointer'>email@example.com</p>
           </a>
-        </li>
-        <li className='p-4 bg-slate-200 w-fit border border-black rounded-md'>
-          <a href="http://linkedin.com/in/robsonossantana/" target="_blank" rel="noreferrer" className='flex flex-col items-center gap-1'>
-            <Linkedin className='inline' />LinkedIn
+        </div>
+        <div className='flex flew-row gap-4'>
+          <a href="http://linkedin.com/in/robsonossantana/" target="_blank" rel="noreferrer">
+            <Linkedin className='inline hover:cursor-pointer' />
           </a>
-        </li>
-        <li className='flex flex-col items-center p-4 bg-slate-200 w-fit border border-black rounded-md'>
-          <a href="https://github.com/ROSS1996" target="_blank" rel="noreferrer" className='flex flex-col items-center gap-1'>
-            <Github className='inline' />Github
+          <a href="https://github.com/ROSS1996" target="_blank" rel="noreferrer">
+            <Github className='inline hover:cursor-pointer' />
           </a>
-        </li>
-      </ul>
+        </div>
+      </div>
     </section>
   );
 }
