@@ -8,12 +8,12 @@ import Skills from '../components/skills'
 
 export default function Home() {
   return (
-    <div className='flex flex-row h-screen overflow-hidden bg-quaternary text-secondary font-ruda'>
+    <div className='flex flex-row h-screen overflow-hidden bg-gblue text-lightgray font-ruda'>
       < PageHead pageTitle='Robson Santana' />
-      <header className='w-2/6'>
+      <header className='w-2/6 font-ruda'>
         <Navbar />
       </header>
-      <main className='overflow-y-auto scroll-smooth p-6 flex flex-col gap-6 font-outfit'>
+      <main className='overflow-y-auto scroll-smooth p-6 flex flex-col gap-6 font-outfit scrollbar-thin scrollbar-thumb-midgray scrollbar-thumb-rounded-full scrollbar-track-lightgray '>
         <About />
         < Skills />
         <Projects />

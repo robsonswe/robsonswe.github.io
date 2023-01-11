@@ -24,7 +24,7 @@ function Projects() {
   const projectsList = fireProjects.map((item) => {
     if (item.screenshot) {
       return (
-        <div className="flex flex-row justify-between bg-quinternary mb-2 rounded w-full gap-5 text-left p-3" key={item.id} >
+        <div className="flex flex-row justify-between bg-lightgblue mb-2 rounded w-full gap-5 text-left p-3" key={item.id} >
           <div className="flex flex-col justify-around">
             <h2 className="font-bold">{item.name}</h2>
             <p>{item.description}</p>
