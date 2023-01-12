@@ -24,7 +24,7 @@ export default function Skills() {
     return (
         <section id='skills' className='ml-2'>
             <h1 className="font-bold text-2xl">Tech Skills</h1>
-            <div className='grid grid-cols-3 gap-4 mt-1 content-between'>
+            <div className='flex flex-col gap-4 mt-1 content-between lg:grid lg:grid-cols-3'>
                 <div className='flex flex-col items-center p-4 bg-lightgblue w-full rounded-md'>
                     <h2 className='self-center text-lg font-bold font-exo'>Frontend</h2>
                     <div className='flex flex-col justify-start gap-2 p-4 opacity-70 flex-wrap w-full'>

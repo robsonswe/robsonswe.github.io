@@ -4,7 +4,7 @@ function Contact() {
   return (
     <section id="contact" className="ml-2 mb-1">
       <h2 className="font-bold text-2xl">Contact</h2>
-      <div className='bg-lightgblue w-96 justify-between h-56 flex flex-col p-8 rounded-md mt-1'>
+      <div className='bg-lightgblue w-fit justify-between  flex flex-col p-8 rounded-md mt-1 sm:h-56 sm:w-96'>
         <div>
           <h1 className='font-bold text-lg'>Robson O. S. de Santana</h1>
           <h2 className='font-semibold'>Web Developer</h2>
