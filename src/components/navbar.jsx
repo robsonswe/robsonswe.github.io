@@ -18,7 +18,7 @@ function Projects() {
             <li><a href="#techs" className='sm:text-2xl p-1 rounded hover:bg-lightgblue'>Techs</a></li>
             <li><a href="#screenshots" className='sm:text-2xl p-1 rounded hover:bg-lightgblue'>Screenshots</a></li>
             <li>
-                <Link href='/' className='flex items-center gap-1 sm:text-2xl p-1 rounded hover:bg-lightgblue'>Go back</Link>
+                <Link href='/' className='flex items-center gap-1 sm:text-base p-1 rounded hover:bg-lightgblue'>Return to Index</Link>
             </li>
         </>
     )

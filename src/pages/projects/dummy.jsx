@@ -34,7 +34,7 @@ function About() {
     return (
         <section id="about" className="ml-2" lang="zxx">
             <h2 className="font-bold text-2xl">About</h2>
-            <p className="text-justify my-1">
+            <p className="text-justify my-1  bg-lightgblue p-4 rounded">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati illo error earum, ratione dolorum aliquid dolorem provident quae culpa atque odio et deleniti, eum, porro assumenda iusto. Praesentium, aliquid maxime.
                 Numquam voluptatibus vitae, accusamus inventore, optio molestiae sapiente recusandae dignissimos deleniti repudiandae necessitatibus dolore? In tempore repellat quae. Veritatis repudiandae ea suscipit porro maxime blanditiis placeat aperiam dolore consequatur expedita!
                 Autem recusandae quibusdam placeat tempora ea, nobis aliquid. Quis atque magni voluptatem architecto eligendi similique, sapiente aperiam eius excepturi illo tempora vero possimus in ratione qui earum nesciunt repellendus consequuntur!
@@ -48,7 +48,7 @@ function Techs() {
     return (
         <section id="techs" className="ml-2">
             <h2 className="font-bold text-2xl">Tech Stack</h2>
-            <div className='grid grid-rows-2 items-center p- w-full gap-2 my-2'>
+            <div className='grid grid-rows-2 items-center p- w-full gap-2 my-2 bg-lightgblue p-4 rounded'>
                 <div>
                     <h2 className='self-center text-lg font-bold font-exo'>Frontend</h2>
                     <hr />
@@ -98,7 +98,7 @@ function Screenshots() {
     return (
         <section id="screenshots" className="ml-2 flex flex-col gap-4" lang="zxx">
             <h2 className="font-bold text-2xl">Screenshots</h2>
-            <div className="my-1 flex flex-col gap-5">
+            <div className="my-1 flex flex-col gap-5 w-fit bg-lightgblue p-4 rounded lg:flex-row">
 
                 <Lightbox
                     open={index >= 0}
@@ -133,7 +133,7 @@ function Screenshots() {
 
                 <Image src={image0} height={800} width={800} alt='imageOne' onClick={() => setIndex(0)} />
 
-                <div className="flex flex-row flex-wrap gap-4">
+                <div className="flex flex-row flex-wrap gap-4 lg:flex-col">
                     <Image src={image1} height={200} width={200} alt='imageOne' onClick={() => { setIndex(1) }} />
                     <Image src={image2} height={200} width={200} alt='imageTwo' onClick={() => setIndex(2)} />
                     <Image src={image3} height={200} width={200} alt='imageThree' onClick={() => setIndex(3)} />
