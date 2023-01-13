@@ -1,7 +1,16 @@
-import Image from 'next/image';
+import { useState } from "react";
 
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
+
+import Image from "next/image";
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+
+import image0 from "../../../public/images/108-900x900.jpg";
+import image1 from "../../../public/images/175-900x900.jpg";
+import image2 from "../../../public/images/235-900x900.jpg";
+import image3 from "../../../public/images/781-900x900.jpg";
+
+
 
 let iconsColor = "#C0C1C8";
 let secondColor = "#2d2c40";
@@ -81,33 +90,56 @@ function Links() {
 
 
 function Screenshots() {
+
+    const [index, setIndex] = useState(-1);
+
+
+
     return (
         <section id="screenshots" className="ml-2 flex flex-col gap-4" lang="zxx">
             <h2 className="font-bold text-2xl">Screenshots</h2>
-            <div className="my-1 flex flex-row gap-5">
-                <Carousel emulateTouch useKeyboardArrows width={'60%'}>
-                    <div>
-                        <img src="https://picsum.photos/800/800" alt='Placeholder' />
-                        <p className="legend">Image 1</p>
-                    </div>
-                    <div>
-                        <img src="https://picsum.photos/400/400" alt='Placeholder' />
-                        <p className="legend">Image 2</p>
-                    </div>
-                    <div>
-                        <img src="https://picsum.photos/400/400" alt='Placeholder' />
-                        <p className="legend">Image 31</p>
-                    </div>
-                    <div>
-                        <img src="https://picsum.photos/400/400" alt='Placeholder' />
-                        <p className="legend">Image 4</p>
-                    </div>
-                    <div>
-                        <img src="https://picsum.photos/400/400" alt='Placeholder' />
-                        <p className="legend">Image 5</p>
-                    </div>
+            <div className="my-1 flex flex-col gap-5">
 
-                </Carousel>
+                <Lightbox
+                    open={index >= 0}
+                    index={index}
+                    close={() => setIndex(-1)}
+                    slides={[image0, image1, image2, image3]}
+                    render={{
+                        slide: (image, offset, rect) => {
+                            const width = Math.round(Math.min(rect.width, (rect.height / image.height) * image.width));
+                            const height = Math.round(Math.min(rect.height, (rect.width / image.width) * image.height));
+
+                            return (
+                                <div style={{ position: "relative", width, height }}>
+                                    <Image
+                                        fill
+                                        src={image}
+                                        loading="eager"
+                                        placeholder="blur"
+                                        alt={"alt" in image ? image.alt : ""}
+                                        sizes={
+                                            typeof window !== "undefined"
+                                                ? `${Math.ceil((width / window.innerWidth) * 100)}vw`
+                                                : `${width}px`
+                                        }
+                                    />
+                                </div>
+                            );
+                        }
+                    }}
+                />
+
+
+                <Image src={image0} height={800} width={800} alt='imageOne' onClick={() => setIndex(0)} />
+
+                <div className="flex flex-row flex-wrap gap-4">
+                    <Image src={image1} height={200} width={200} alt='imageOne' onClick={() => { setIndex(1) }} />
+                    <Image src={image2} height={200} width={200} alt='imageTwo' onClick={() => setIndex(2)} />
+                    <Image src={image3} height={200} width={200} alt='imageThree' onClick={() => setIndex(3)} />
+                </div>
+
+
             </div>
         </section>
     )
