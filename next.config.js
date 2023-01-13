@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['ross1996.github.io', 'localhost'],
+    domains: ['ross1996.github.io', 'localhost', 'picsum.photos'],
   },
 }
 

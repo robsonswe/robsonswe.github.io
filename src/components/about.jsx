@@ -1,6 +1,6 @@
 function About() {
     return (
-        <section id="about" className="ml-2">
+        <section id="about" className="ml-2" lang="zxx">
             <h2 className="font-bold text-2xl">About</h2>
             <p className="text-justify p-4 bg-lightgblue rounded mt-1">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati illo error earum, ratione dolorum aliquid dolorem provident quae culpa atque odio et deleniti, eum, porro assumenda iusto. Praesentium, aliquid maxime.

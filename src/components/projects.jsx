@@ -1,4 +1,6 @@
 import Image from "next/image";
+import Link from 'next/link';
+
 
 const fireProjects = [
   {
@@ -28,7 +30,9 @@ function Projects() {
           <div className="flex flex-col justify-around">
             <h2 className="font-bold">{item.name}</h2>
             <p>{item.description}</p>
-            <p className="self-stretch"><a href="#" className="">See more</a></p>
+            <p className="self-stretch">
+              <Link href="./projects/dummy">See more</Link>
+            </p>
           </div>
           <div><Image src={item.screenshot} width={220} height={220} className='rounded' alt="..." priority /> </div>
         </div>

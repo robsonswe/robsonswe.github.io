@@ -1,4 +1,5 @@
 let iconsColor = "#C0C1C8";
+let secondColor = "#2D2C40";
 
 import {
     HtmlLogo,
@@ -18,6 +19,8 @@ import {
     FirebaseLogo,
     GitLogo,
     GithubLogo,
+    KubernetesLogo,
+    DockerLogo
 } from './svglogos'
 
 export default function Skills() {
@@ -31,14 +34,14 @@ export default function Skills() {
                         <h3>HTML</h3>
                         <div className='flex flex-row flex-wrap items-center justify-start gap-3 border-t border-solid p-2'>
                             <div className='flex flex-col items-center justify-between'>
-                                < HtmlLogo size={'1.75rem'} color={iconsColor} />
+                                < HtmlLogo size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
                                 <div className='text-xs'>HTML</div>
                             </div>
                         </div>
                         <h3>CSS</h3>
                         <div className='flex flex-row flex-wrap items-center justify-start gap-3 border-t border-solid p-2'>
                             <div className='flex flex-col items-center justify-between'>
-                                < CssLogo size={'1.75rem'} color={iconsColor} />
+                                < CssLogo size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
                                 <div className='text-xs'>CSS</div>
                             </div>
                             <div className='flex flex-col items-center justify-between'>
@@ -53,15 +56,15 @@ export default function Skills() {
                         <h3>Javascript</h3>
                         <div className='flex flex-row flex-wrap items-center justify-start gap-3 border-t border-solid p-2'>
                             <div className='flex flex-col items-center justify-between'>
-                                < JSlogo size={'1.75rem'} color={iconsColor} />
+                                < JSlogo size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
                                 <div className='text-xs'>Javascript</div>
                             </div>
                             <div className='flex flex-col items-center justify-between'>
-                                < TypesriptLogo size={'1.75rem'} color={iconsColor} />
+                                < TypesriptLogo size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
                                 <div className='text-xs'>Typescript</div>
                             </div>
                             <div className='flex flex-col items-center justify-between'>
-                                < NextLogo size={'1.75rem'} color={iconsColor} />
+                                < NextLogo size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
                                 <div className='text-xs'>NextJS</div>
                             </div>
                             <div className='flex flex-col items-center justify-between'>
@@ -85,18 +88,18 @@ export default function Skills() {
                                 <div className='text-xs'>NodeJS</div>
                             </div>
                             <div className='flex flex-col items-center justify-around '>
-                                < ExpressLogo size={'1.75rem'} color={iconsColor} type={'icon'} />
+                                < ExpressLogo size={'1.75rem'} color={iconsColor} />
                                 <div className='text-xs'>ExpressJS</div>
                             </div>
                         </div>
                         <h3>Database</h3>
                         <div className='flex flex-row flex-wrap items-center justify-start gap-3 border-t border-solid p-2'>
                             <div className='flex flex-col items-center justify-between'>
-                                < MongoLogo size={'1.75rem'} color={iconsColor} />
+                                < MongoLogo size={'1.75rem'} color={iconsColor} secondColor={'#96969e'} />
                                 <div className='text-xs'>MongoDB</div>
                             </div>
                             <div className='flex flex-col items-center justify-between'>
-                                < PostgresLogo size={'1.75rem'} color={iconsColor} />
+                                < PostgresLogo size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
                                 <div className='text-xs'>PostgresSQL</div>
                             </div>
                             <div className='flex flex-col items-center justify-between'>
@@ -118,6 +121,17 @@ export default function Skills() {
                             <div className='flex flex-col items-center justify-between'>
                                 < GithubLogo size={'1.75rem'} color={iconsColor} />
                                 <div className='text-xs'>Github</div>
+                            </div>
+                        </div>
+                        <h3>DevOps</h3>
+                        <div className='flex flex-row flex-wrap items-center justify-start gap-3 border-t border-solid p-2'>
+                            <div className='flex flex-col items-center justify-between'>
+                                < KubernetesLogo size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
+                                <div className='text-xs'>Kubernetes</div>
+                            </div>
+                            <div className='flex flex-col items-center justify-between'>
+                                < DockerLogo size={'1.75rem'} color={iconsColor} />
+                                <div className='text-xs'>Docker</div>
                             </div>
                         </div>
                         <h3>Cloud Services</h3>
