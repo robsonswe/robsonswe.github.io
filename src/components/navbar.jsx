@@ -3,10 +3,10 @@ import Link from "next/link"
 function Index() {
     return (
         <>
-            <li><a href="#about" className='flex items-center gap-1 sm:text-2xl p-1 rounded hover:bg-lightgblue'>About</a></li>
-            <li><a href="#skills" className='flex items-center gap-1 sm:text-2xl p-1 rounded hover:bg-lightgblue'>Skills</a></li>
-            <li><a href="#projects" className='flex items-center gap-1 sm:text-2xl p-1 rounded hover:bg-lightgblue'>Projects</a></li>
-            <li><a href="#contact" className='flex items-center gap-1 sm:text-2xl p-1 rounded hover:bg-lightgblue'>Contact</a></li>
+            <li><a href="#about" className='flex items-center gap-1 p-1 rounded sm:text-2xl hover:bg-lightgblue'>About</a></li>
+            <li><a href="#skills" className='flex items-center gap-1 p-1 rounded sm:text-2xl hover:bg-lightgblue'>Skills</a></li>
+            <li><a href="#projects" className='flex items-center gap-1 p-1 rounded sm:text-2xl hover:bg-lightgblue'>Projects</a></li>
+            <li><a href="#contact" className='flex items-center gap-1 p-1 rounded sm:text-2xl hover:bg-lightgblue'>Contact</a></li>
         </>
     )
 }
@@ -14,11 +14,11 @@ function Index() {
 function Projects() {
     return (
         <>
-            <li><a href="#about" className='sm:text-2xl p-1 rounded hover:bg-lightgblue'>About</a></li>
-            <li><a href="#techs" className='sm:text-2xl p-1 rounded hover:bg-lightgblue'>Techs</a></li>
-            <li><a href="#screenshots" className='sm:text-2xl p-1 rounded hover:bg-lightgblue'>Screenshots</a></li>
+            <li><a href="#about" className='p-1 rounded sm:text-2xl hover:bg-lightgblue'>About</a></li>
+            <li><a href="#techs" className='p-1 rounded sm:text-2xl hover:bg-lightgblue'>Techs</a></li>
+            <li><a href="#screenshots" className='p-1 rounded sm:text-2xl hover:bg-lightgblue'>Screenshots</a></li>
             <li>
-                <Link href='/' className='flex items-center gap-1 sm:text-base p-1 rounded hover:bg-lightgblue'>Return to Index</Link>
+                <Link href='/' className='flex items-center gap-1 p-1 rounded sm:text-base hover:bg-lightgblue'>Return to Index</Link>
             </li>
         </>
     )
@@ -28,7 +28,7 @@ function Projects() {
 function Navbar(props) {
     let page = props.page
     return (
-        <nav className="flex flex-col border-r border-midgray gap-2 sm:h-screen sm:p-6 sm:text-right sm:gap-20">
+        <nav className="flex flex-col gap-2 border-r border-midgray sm:h-screen sm:p-6 sm:text-right sm:gap-20">
             <h1 className="text-5xl text-center sm:text-left">Robson <span className="sm:text-4xl">Santana</span></h1>
             <ul className="flex flex-row justify-center gap-4 sm:flex-col sm:items-end">
                 {

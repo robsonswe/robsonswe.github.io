@@ -26,20 +26,20 @@ import {
 export default function Skills() {
     return (
         <section id='skills' className='ml-2'>
-            <h1 className="font-bold text-2xl">Tech Skills</h1>
-            <div className='flex flex-col gap-4 mt-1 content-between lg:grid lg:grid-cols-3'>
-                <div className='flex flex-col items-center p-4 bg-lightgblue w-full rounded-md'>
+            <h1 className="text-2xl font-bold">Tech Skills</h1>
+            <div className='flex flex-col content-between gap-4 mt-1 lg:grid lg:grid-cols-3'>
+                <div className='flex flex-col items-center w-full p-4 rounded-md bg-lightgblue'>
                     <h2 className='self-center text-lg font-bold font-exo'>Frontend</h2>
-                    <div className='flex flex-col justify-start gap-2 p-4 opacity-70 flex-wrap w-full'>
+                    <div className='flex flex-col flex-wrap justify-start w-full gap-2 p-4 opacity-70'>
                         <h3>HTML</h3>
-                        <div className='flex flex-row flex-wrap items-center justify-start gap-3 border-t border-solid p-2'>
+                        <div className='flex flex-row flex-wrap items-center justify-start gap-3 p-2 border-t border-solid'>
                             <div className='flex flex-col items-center justify-between'>
                                 < HtmlLogo size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
                                 <div className='text-xs'>HTML</div>
                             </div>
                         </div>
                         <h3>CSS</h3>
-                        <div className='flex flex-row flex-wrap items-center justify-start gap-3 border-t border-solid p-2'>
+                        <div className='flex flex-row flex-wrap items-center justify-start gap-3 p-2 border-t border-solid'>
                             <div className='flex flex-col items-center justify-between'>
                                 < CssLogo size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
                                 <div className='text-xs'>CSS</div>
@@ -54,7 +54,7 @@ export default function Skills() {
                             </div>
                         </div>
                         <h3>Javascript</h3>
-                        <div className='flex flex-row flex-wrap items-center justify-start gap-3 border-t border-solid p-2'>
+                        <div className='flex flex-row flex-wrap items-center justify-start gap-3 p-2 border-t border-solid'>
                             <div className='flex flex-col items-center justify-between'>
                                 < JSlogo size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
                                 <div className='text-xs'>Javascript</div>
@@ -78,11 +78,11 @@ export default function Skills() {
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-col items-center p-4 bg-lightgblue w-full rounded-md'>
+                <div className='flex flex-col items-center w-full p-4 rounded-md bg-lightgblue'>
                     <h2 className='self-center text-lg font-bold font-exo'>Backend</h2>
-                    <div className='flex flex-col justify-start gap-2 p-4 opacity-70 flex-wrap w-full'>
+                    <div className='flex flex-col flex-wrap justify-start w-full gap-2 p-4 opacity-70'>
                         <h3>Javascript</h3>
-                        <div className='flex flex-row flex-wrap items-center justify-start gap-3 border-t border-solid p-2'>
+                        <div className='flex flex-row flex-wrap items-center justify-start gap-3 p-2 border-t border-solid'>
                             <div className='flex flex-col items-center justify-between'>
                                 < NodeLogo size={'1.75rem'} color={iconsColor} />
                                 <div className='text-xs'>NodeJS</div>
@@ -93,7 +93,7 @@ export default function Skills() {
                             </div>
                         </div>
                         <h3>Database</h3>
-                        <div className='flex flex-row flex-wrap items-center justify-start gap-3 border-t border-solid p-2'>
+                        <div className='flex flex-row flex-wrap items-center justify-start gap-3 p-2 border-t border-solid'>
                             <div className='flex flex-col items-center justify-between'>
                                 < MongoLogo size={'1.75rem'} color={iconsColor} secondColor={'#96969e'} />
                                 <div className='text-xs'>MongoDB</div>
@@ -109,11 +109,11 @@ export default function Skills() {
                         </div>
                     </div>
                 </div>
-                <div className='flex flex-col items-center p-4 bg-lightgblue w-full rounded-md'>
+                <div className='flex flex-col items-center w-full p-4 rounded-md bg-lightgblue'>
                     <h2 className='self-center text-lg font-bold font-exo'>Miscellaneous</h2>
-                    <div className='flex flex-col justify-start gap-2 p-4 opacity-70 flex-wrap w-full'>
+                    <div className='flex flex-col flex-wrap justify-start w-full gap-2 p-4 opacity-70'>
                         <h3>Version Control</h3>
-                        <div className='flex flex-row flex-wrap items-center justify-start gap-3 border-t border-solid p-2'>
+                        <div className='flex flex-row flex-wrap items-center justify-start gap-3 p-2 border-t border-solid'>
                             <div className='flex flex-col items-center justify-between'>
                                 < GitLogo size={'1.75rem'} color={iconsColor} />
                                 <div className='text-xs'>Git</div>
@@ -124,7 +124,7 @@ export default function Skills() {
                             </div>
                         </div>
                         <h3>DevOps</h3>
-                        <div className='flex flex-row flex-wrap items-center justify-start gap-3 border-t border-solid p-2'>
+                        <div className='flex flex-row flex-wrap items-center justify-start gap-3 p-2 border-t border-solid'>
                             <div className='flex flex-col items-center justify-between'>
                                 < KubernetesLogo size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
                                 <div className='text-xs'>Kubernetes</div>
@@ -135,7 +135,7 @@ export default function Skills() {
                             </div>
                         </div>
                         <h3>Cloud Services</h3>
-                        <div className='flex flex-row flex-wrap items-center justify-start gap-3 border-t border-solid p-2'>
+                        <div className='flex flex-row flex-wrap items-center justify-start gap-3 p-2 border-t border-solid'>
                             <div className='flex flex-col items-center justify-between'>
                                 < FirebaseLogo size={'1.75rem'} color={iconsColor} />
                                 <div className='text-xs'>Firebase</div>

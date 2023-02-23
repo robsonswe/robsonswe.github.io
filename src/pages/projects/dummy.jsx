@@ -33,8 +33,8 @@ import Navbar from "../../components/navbar"
 function About() {
     return (
         <section id="about" className="ml-2" lang="zxx">
-            <h2 className="font-bold text-2xl">About</h2>
-            <p className="text-justify my-1  bg-lightgblue p-4 rounded">
+            <h2 className="text-2xl font-bold">About</h2>
+            <p className="p-4 my-1 text-justify rounded bg-lightgblue">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati illo error earum, ratione dolorum aliquid dolorem provident quae culpa atque odio et deleniti, eum, porro assumenda iusto. Praesentium, aliquid maxime.
                 Numquam voluptatibus vitae, accusamus inventore, optio molestiae sapiente recusandae dignissimos deleniti repudiandae necessitatibus dolore? In tempore repellat quae. Veritatis repudiandae ea suscipit porro maxime blanditiis placeat aperiam dolore consequatur expedita!
                 Autem recusandae quibusdam placeat tempora ea, nobis aliquid. Quis atque magni voluptatem architecto eligendi similique, sapiente aperiam eius excepturi illo tempora vero possimus in ratione qui earum nesciunt repellendus consequuntur!
@@ -47,12 +47,12 @@ function About() {
 function Techs() {
     return (
         <section id="techs" className="ml-2">
-            <h2 className="font-bold text-2xl">Tech Stack</h2>
-            <div className='grid grid-rows-2 items-center p- w-full gap-2 my-2 bg-lightgblue p-4 rounded'>
+            <h2 className="text-2xl font-bold">Tech Stack</h2>
+            <div className='grid items-center w-full grid-rows-2 gap-2 p-4 my-2 rounded p- bg-lightgblue'>
                 <div>
                     <h2 className='self-center text-lg font-bold font-exo'>Frontend</h2>
                     <hr />
-                    <ul className='flex flex-row flex-wrap p-4 opacity-70 w-full text-center gap-4'>
+                    <ul className='flex flex-row flex-wrap w-full gap-4 p-4 text-center opacity-70'>
                         <li className='flex items-center gap-1'><HtmlLogo size='1.5rem' color={iconsColor} secondColor={secondColor} />HTML</li>
                         <li className='flex items-center gap-1'><CssLogo size='1.5rem' color={iconsColor} secondColor={secondColor} />CSS</li>
                         <li className='flex items-center gap-1'><JSlogo size='1.5rem' color={iconsColor} secondColor={secondColor} />Javascript</li>
@@ -62,7 +62,7 @@ function Techs() {
                 <div>
                     <h2 className='self-center text-lg font-bold font-exo'>Backend</h2>
                     <hr />
-                    <ul className='flex flex-row flex-wrap p-4 opacity-70 w-full text-center gap-7'>
+                    <ul className='flex flex-row flex-wrap w-full p-4 text-center opacity-70 gap-7'>
                         <li className='flex items-center gap-1'><NodeLogo size='1.5rem' color={iconsColor} />NodeJS</li>
                         <li className='flex items-center gap-1'><ExpressLogo size='1.5rem' color={iconsColor} />ExpressJS</li>
                         <li className='flex items-center gap-1'><MongoLogo size='1.5rem' color={iconsColor} secondColor={'#96969e'} />MongoDB</li>
@@ -77,8 +77,8 @@ function Techs() {
 function Links() {
     return (
         <section id="about" className="ml-2" lang="zxx">
-            <h2 className="font-bold text-2xl">About</h2>
-            <p className="text-justify my-1">
+            <h2 className="text-2xl font-bold">About</h2>
+            <p className="my-1 text-justify">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati illo error earum, ratione dolorum aliquid dolorem provident quae culpa atque odio et deleniti, eum, porro assumenda iusto. Praesentium, aliquid maxime.
                 Numquam voluptatibus vitae, accusamus inventore, optio molestiae sapiente recusandae dignissimos deleniti repudiandae necessitatibus dolore? In tempore repellat quae. Veritatis repudiandae ea suscipit porro maxime blanditiis placeat aperiam dolore consequatur expedita!
                 Autem recusandae quibusdam placeat tempora ea, nobis aliquid. Quis atque magni voluptatem architecto eligendi similique, sapiente aperiam eius excepturi illo tempora vero possimus in ratione qui earum nesciunt repellendus consequuntur!
@@ -96,9 +96,9 @@ function Screenshots() {
 
 
     return (
-        <section id="screenshots" className="ml-2 flex flex-col gap-4" lang="zxx">
-            <h2 className="font-bold text-2xl">Screenshots</h2>
-            <div className="my-1 flex flex-col gap-5 w-fit bg-lightgblue p-4 rounded lg:flex-row">
+        <section id="screenshots" className="flex flex-col gap-4 ml-2" lang="zxx">
+            <h2 className="text-2xl font-bold">Screenshots</h2>
+            <div className="flex flex-col gap-5 p-4 my-1 rounded w-fit bg-lightgblue lg:flex-row">
 
                 <Lightbox
                     open={index >= 0}
@@ -156,7 +156,7 @@ export default function Dummy() {
             <header className='font-ruda sm:w-56'>
                 <Navbar page={'project'} />
             </header>
-            <main className='overflow-y-auto scroll-smooth flex flex-col gap-6 font-outfit scrollbar-thin scrollbar-thumb-midgray scrollbar-thumb-rounded-full scrollbar-track-lightgray p-2 sm:p-6'>
+            <main className='flex flex-col gap-6 p-2 overflow-y-auto scroll-smooth font-outfit scrollbar-thin scrollbar-thumb-midgray scrollbar-thumb-rounded-full scrollbar-track-lightgray sm:p-6'>
                 <h1 className="ml-2 text-4xl">Project X</h1>
                 <About />
                 <Techs />
