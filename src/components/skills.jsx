@@ -8,26 +8,20 @@ import {
     TypesriptLogo,
     ReactLogo,
     NextLogo,
-    ReduxLogo,
     SassLogo,
     TailwindLogo,
     NodeLogo,
     ExpressLogo,
-    MongoLogo,
     PostgresLogo,
     MysqlLogo,
-    FirebaseLogo,
-    GitLogo,
-    GithubLogo,
-    KubernetesLogo,
-    DockerLogo
+    PythonLogo
 } from './svglogos'
 
 export default function Skills() {
     return (
         <section id='skills' className='ml-2'>
             <h1 className="text-2xl font-bold">Tech Skills</h1>
-            <div className='flex flex-col content-between gap-4 mt-1 lg:grid lg:grid-cols-3'>
+            <div className='flex flex-col content-between gap-4 mt-1 lg:grid lg:grid-cols-2'>
                 <div className='flex flex-col items-center w-full p-4 rounded-md bg-lightgblue'>
                     <h2 className='self-center text-lg font-bold font-exo'>Frontend</h2>
                     <div className='flex flex-col flex-wrap justify-start w-full gap-2 p-4 opacity-70'>
@@ -71,10 +65,6 @@ export default function Skills() {
                                 < ReactLogo size={'1.75rem'} color={iconsColor} />
                                 <div className='text-xs'>React</div>
                             </div>
-                            <div className='flex flex-col items-center justify-between'>
-                                < ReduxLogo size={'1.75rem'} color={iconsColor} />
-                                <div className='text-xs'>Redux</div>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -92,12 +82,15 @@ export default function Skills() {
                                 <div className='text-xs'>ExpressJS</div>
                             </div>
                         </div>
-                        <h3>Database</h3>
+                        <h3>Python</h3>
                         <div className='flex flex-row flex-wrap items-center justify-start gap-3 p-2 border-t border-solid'>
                             <div className='flex flex-col items-center justify-between'>
-                                < MongoLogo size={'1.75rem'} color={iconsColor} secondColor={'#96969e'} />
-                                <div className='text-xs'>MongoDB</div>
+                                < PythonLogo size={'1.75rem'} color={iconsColor} />
+                                <div className='text-xs'>Python</div>
                             </div>
+                        </div>
+                        <h3>Database</h3>
+                        <div className='flex flex-row flex-wrap items-center justify-start gap-3 p-2 border-t border-solid'>
                             <div className='flex flex-col items-center justify-between'>
                                 < PostgresLogo size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
                                 <div className='text-xs'>PostgresSQL</div>
@@ -105,40 +98,6 @@ export default function Skills() {
                             <div className='flex flex-col items-center justify-between'>
                                 < MysqlLogo size={'1.75rem'} color={iconsColor} />
                                 <div className='text-xs'>MySQL</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className='flex flex-col items-center w-full p-4 rounded-md bg-lightgblue'>
-                    <h2 className='self-center text-lg font-bold font-exo'>Miscellaneous</h2>
-                    <div className='flex flex-col flex-wrap justify-start w-full gap-2 p-4 opacity-70'>
-                        <h3>Version Control</h3>
-                        <div className='flex flex-row flex-wrap items-center justify-start gap-3 p-2 border-t border-solid'>
-                            <div className='flex flex-col items-center justify-between'>
-                                < GitLogo size={'1.75rem'} color={iconsColor} />
-                                <div className='text-xs'>Git</div>
-                            </div>
-                            <div className='flex flex-col items-center justify-between'>
-                                < GithubLogo size={'1.75rem'} color={iconsColor} />
-                                <div className='text-xs'>Github</div>
-                            </div>
-                        </div>
-                        <h3>DevOps</h3>
-                        <div className='flex flex-row flex-wrap items-center justify-start gap-3 p-2 border-t border-solid'>
-                            <div className='flex flex-col items-center justify-between'>
-                                < KubernetesLogo size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
-                                <div className='text-xs'>Kubernetes</div>
-                            </div>
-                            <div className='flex flex-col items-center justify-between'>
-                                < DockerLogo size={'1.75rem'} color={iconsColor} />
-                                <div className='text-xs'>Docker</div>
-                            </div>
-                        </div>
-                        <h3>Cloud Services</h3>
-                        <div className='flex flex-row flex-wrap items-center justify-start gap-3 p-2 border-t border-solid'>
-                            <div className='flex flex-col items-center justify-between'>
-                                < FirebaseLogo size={'1.75rem'} color={iconsColor} />
-                                <div className='text-xs'>Firebase</div>
                             </div>
                         </div>
                     </div>

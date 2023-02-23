@@ -5,19 +5,27 @@ import Link from 'next/link';
 const fireProjects = [
   {
     id: 1,
-    name: 'Social Media Dashboard',
-    description: 'Social Media Dashboard with Theme Selector',
-    github: 'https://github.com/ROSS1996/frontend-projects/tree/main/smdt-junior',
-    preview: 'https://ross1996.github.io/frontend-projects/smdt-junior',
-    screenshot: 'https://ross1996.github.io/frontend-projects/screenshots/smdt-junior.jpeg'
+    name: 'eSports Page',
+    description: `This is a web project that provides relevant stats about eSports players and teams. The platform is built using HTML, TailwindCSS, Typescript, React, and NextJS. The project also makes use of Python scripts to gatter the information provided.`,
+    github: 'https://github.com/ROSS1996/cs50xfinal',
+    preview: 'https://cs50xfinal.vercel.app/',
+    screenshot: 'https://ross1996.github.io/frontend-projects/screenshots/esports.jpg'
   },
   {
     id: 2,
-    name: 'Interactive card details',
-    description: 'Interactive credit card page',
-    github: 'https://github.com/ROSS1996/frontend-projects/tree/main/icdf-junior',
-    preview: 'https://ross1996.github.io/frontend-projects/icdf-junior',
-    screenshot: 'https://ross1996.github.io/frontend-projects/screenshots/icdf-junior.jpeg'
+    name: 'IP Address Tracker',
+    description: 'This is a web project that provides information on IP addressess. The platform is built using HTML, CSS and Javascript. It also uses LeafletJS library to visually map the IP address.',
+    github: 'https://github.com/ROSS1996/frontend-projects/tree/iptrack-int',
+    preview: 'https://ross1996.github.io/frontend-projects/iptrack-int',
+    screenshot: 'https://ross1996.github.io/frontend-projects/screenshots/iptrack-int.jpg'
+  },
+  {
+    id: 3,
+    name: 'URL Shortening Page',
+    description: 'This is a web project that provides a solution to shorten URL links. The platform is built using HTML, CSS, Sass and React.',
+    github: 'https://github.com/ROSS1996/frontend-projects/tree/linkshort-int',
+    preview: 'https://ross1996.github.io/frontend-projects/linkshort-int',
+    screenshot: 'https://ross1996.github.io/frontend-projects/screenshots/linkshort-int.jpg'
   }
 ]
 
@@ -28,17 +36,17 @@ function Projects() {
     if (item.screenshot) {
       return (
         <div key={item.id} >
-          <div className="flex flex-row justify-between w-full gap-5 p-3 mb-2 text-left rounded bg-lightgblue" >
-            <div className="flex flex-col justify-around">
+          <div className="grid w-full grid-cols-[1fr_200px] mb-2 text-left rounded bg-lightgblue" >
+            <div className="grid grid-rows-[20px_1fr] gap-4 px-3 py-4">
               <h2 className="font-bold">{item.name}</h2>
               <p>{item.description}</p>
             </div>
-            <div><Image src={item.screenshot} width={220} height={220} className='rounded-sm' alt="..." priority /> </div>
+            <div><Image src={item.screenshot} width={200} height={200} className='rounded-r' alt="..." priority /> </div>
           </div>
           <div className="flex flex-row justify-center p-1 mb-1 text-sm border rounded w-fit bg-lightgblue border-midgray">
-            <Link href="./projects/dummy" className="px-2 border-r hover:underline underline-offset-2 border-midgray">Details</Link>
+            <Link href="./projects/dummy" className="hidden px-2 border-r hover:underline underline-offset-2 border-midgray">Details</Link>
             <Link href={item.preview} target='_blank' className="px-2 hover:underline underline-offset-2 border-midgray">Live Version</Link>
-            <Link href={item.preview} target='_blank' className="px-2 border-l hover:underline underline-offset-2 border-midgray">Source Code</Link>
+            <Link href={item.github} target='_blank' className="px-2 border-l hover:underline underline-offset-2 border-midgray">Source Code</Link>
           </div>
         </div>
       );
