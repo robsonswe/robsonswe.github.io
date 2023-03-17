@@ -7,9 +7,9 @@ function Contact() {
       <div className='flex flex-col justify-between p-8 mt-1 rounded-md bg-lightgblue w-fit sm:h-56 sm:w-96'>
         <div>
           <h1 className='text-lg font-bold'>Robson O. S. de Santana</h1>
-          <h2 className='font-semibold'>Web Developer</h2>
-          <a href="mailto://email@example.com">
-            <p className='font-thin cursor-pointer hover:underline'>email@example.com</p>
+          <h2 className='font-semibold'>Software Developer</h2>
+          <a href="mailto://robsonssdev@gmail.com">
+            <p className='font-thin cursor-pointer hover:underline'>robsonssdev@gmail.com</p>
           </a>
         </div>
         <div className='flex gap-4 flew-row'>
