@@ -20,13 +20,29 @@ import {
     DockerLogo
 } from './svglogos'
 
-export default function Skills() {
+export default function Skills({ lang }) {
+    const locales = {
+        'default': {
+            title: 'Tech Skills',
+            languages: 'Languages',
+            frameworks: 'Frameworks',
+            tools: 'Tools',
+        },
+        'pt': {
+            title: 'Conhecimentos Técnicos',
+            languages: 'Linguagens',
+            frameworks: 'Frameworks',
+            tools: 'Ferramentas',
+        },
+    }
+
+    const locale = locales[lang] || locales['default'];
     return (
         <section id='skills' className='ml-2'>
-            <h1 className="text-2xl font-bold">Tech Skills</h1>
+            <h1 className="text-2xl font-bold">{locale.title}</h1>
             <div className='flex flex-col content-between gap-4 mt-1 lg:grid lg:grid-cols-3 opacity-70'>
                 <div className='flex flex-col w-full gap-4 px-4 py-3 rounded-md bg-lightgblue'>
-                    <h2 className='self-center w-full p-1 text-lg font-bold text-center border-b font-exo'>Languages</h2>
+                    <h2 className='self-center w-full p-1 text-lg font-bold text-center border-b font-exo'>{locale.languages}</h2>
                     <div className='p-2'>
                         <ul className="grid grid-flow-col grid-rows-3 gap-5">
                             <li>
@@ -69,7 +85,7 @@ export default function Skills() {
                     </div>
                 </div>
                 <div className='flex flex-col w-full gap-4 px-4 py-3 rounded-md bg-lightgblue'>
-                    <h2 className='self-center w-full p-1 text-lg font-bold text-center border-b font-exo'>Frameworks</h2>
+                    <h2 className='self-center w-full p-1 text-lg font-bold text-center border-b font-exo'>{locale.frameworks}</h2>
                     <div className='p-2'>
                         <ul className="grid grid-flow-col grid-rows-3 gap-5">
                             <li>
@@ -106,7 +122,7 @@ export default function Skills() {
                     </div>
                 </div>
                 <div className='flex flex-col w-full gap-4 px-4 py-3 rounded-md bg-lightgblue'>
-                    <h2 className='self-center w-full p-1 text-lg font-bold text-center border-b font-exo'>Tools</h2>
+                    <h2 className='self-center w-full p-1 text-lg font-bold text-center border-b font-exo'>{locale.tools}</h2>
                     <div className='p-2'>
                         <ul className="grid grid-flow-col grid-rows-3 gap-5">
                             <li>

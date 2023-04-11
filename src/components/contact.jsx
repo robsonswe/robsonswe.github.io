@@ -1,9 +1,21 @@
 import { Github, Linkedin } from 'react-bootstrap-icons';
 
-function Contact() {
+function Contact({ lang }) {
+
+  const locales = {
+    'default': {
+      title: 'Contact',
+    },
+    'pt': {
+      title: 'Contato',
+    },
+  }
+
+  const locale = locales[lang] || locales['default'];
+
   return (
     <section id="contact" className="mb-1 ml-2">
-      <h2 className="text-2xl font-bold">Contact</h2>
+      <h2 className="text-2xl font-bold">{locale.title}</h2>
       <div className='flex flex-col justify-between p-8 mt-1 rounded-md bg-lightgblue w-fit sm:h-56 sm:w-96'>
         <div>
           <h1 className='text-lg font-bold'>Robson O. S. de Santana</h1>
