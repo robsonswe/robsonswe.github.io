@@ -1,24 +1,7 @@
 let iconsColor = "#C0C1C8";
 let secondColor = "#2D2C40";
 
-import {
-    HtmlLogo,
-    CssLogo,
-    JSlogo,
-    TypesriptLogo,
-    ReactLogo,
-    NextLogo,
-    SassLogo,
-    TailwindLogo,
-    NodeLogo,
-    ExpressLogo,
-    PostgresLogo,
-    MysqlLogo,
-    PythonLogo,
-    SQLlogo,
-    GitLogo,
-    DockerLogo
-} from './svglogos'
+import Logo from "./svglogos";
 
 export default function Skills({ lang }) {
     const locales = {
@@ -47,37 +30,37 @@ export default function Skills({ lang }) {
                         <ul className="grid grid-flow-col grid-rows-3 gap-5">
                             <li>
                                 <div className='flex items-center gap-2'>
-                                    < HtmlLogo size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
+                                    < Logo name={'html'} size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
                                     <div>HTML</div>
                                 </div>
                             </li>
                             <li>
                                 <div className='flex items-center gap-2'>
-                                    < SQLlogo color={iconsColor} secondColor={secondColor} />
+                                    < Logo name={'sql'} size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
                                     <div>SQL</div>
                                 </div>
                             </li>
                             <li>
                                 <div className='flex items-center gap-2'>
-                                    < CssLogo size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
+                                    < Logo name={'css'} size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
                                     <div>CSS</div>
                                 </div>
                             </li>
                             <li>
                                 <div className='flex items-center gap-2'>
-                                    < JSlogo size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
+                                    < Logo name={'javascript'} size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
                                     <div>Javascript</div>
                                 </div>
                             </li>
                             <li>
                                 <div className='flex items-center gap-2'>
-                                    < TypesriptLogo size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
+                                    < Logo name={'typescript'} size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
                                     <div>Typescript</div>
                                 </div>
                             </li>
                             <li>
                                 <div className='flex items-center gap-2'>
-                                    < PythonLogo size={'1.75rem'} color={iconsColor} />
+                                    < Logo name={'python'} size={'1.75rem'} color={iconsColor} />
                                     <div>Python</div>
                                 </div>
                             </li>
@@ -90,31 +73,31 @@ export default function Skills({ lang }) {
                         <ul className="grid grid-flow-col grid-rows-3 gap-5">
                             <li>
                                 <div className='flex items-center gap-2'>
-                                    < SassLogo size={'1.75rem'} color={iconsColor} />
+                                    < Logo name={'sass'} size={'1.75rem'} color={iconsColor} />
                                     <div>Sass</div>
                                 </div>
                             </li>
                             <li>
                                 <div className='flex items-center gap-2'>
-                                    < TailwindLogo size={'1.75rem'} color={iconsColor} />
+                                    < Logo name={'tailwind'} size={'1.75rem'} color={iconsColor} />
                                     <div>TailwindCSS</div>
                                 </div>
                             </li>
                             <li>
                                 <div className='flex items-center gap-2'>
-                                    < ExpressLogo size={'1.75rem'} color={iconsColor} />
+                                    < Logo name={'expressjs'} size={'1.75rem'} color={iconsColor} />
                                     <div>ExpressJS</div>
                                 </div>
                             </li>
                             <li>
                                 <div className='flex items-center gap-2'>
-                                    < NextLogo size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
+                                    < Logo name={'nextjs'} size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
                                     <div>NextJS</div>
                                 </div>
                             </li>
                             <li>
                                 <div className='flex items-center gap-2'>
-                                    < ReactLogo size={'1.75rem'} color={iconsColor} />
+                                    < Logo name={'reactjs'} size={'1.75rem'} color={iconsColor} />
                                     <div>React</div>
                                 </div>
                             </li>
@@ -127,31 +110,31 @@ export default function Skills({ lang }) {
                         <ul className="grid grid-flow-col grid-rows-3 gap-5">
                             <li>
                                 <div className='flex items-center gap-2'>
-                                    < NodeLogo size={'1.75rem'} color={iconsColor} />
+                                    < Logo name={'nodejs'} size={'1.75rem'} color={iconsColor} />
                                     <div>NodeJS</div>
                                 </div>
                             </li>
                             <li>
                                 <div className='flex items-center gap-2'>
-                                    < PostgresLogo size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
+                                    < Logo name={'postgres'} size={'1.75rem'} color={iconsColor} secondColor={secondColor} />
                                     <div>PostgresSQL</div>
                                 </div>
                             </li>
                             <li>
                                 <div className='flex items-center gap-2'>
-                                    < MysqlLogo size={'1.75rem'} color={iconsColor} />
+                                    < Logo name={'mysql'} size={'1.75rem'} color={iconsColor} />
                                     <div>MySQL</div>
                                 </div>
                             </li>
                             <li>
                                 <div className='flex items-center gap-2'>
-                                    < GitLogo size={'1.75rem'} color={iconsColor} />
+                                    < Logo name={'git'} size={'1.75rem'} color={iconsColor} />
                                     <div>Git</div>
                                 </div>
                             </li>
                             <li>
                                 <div className='flex items-center gap-2'>
-                                    < DockerLogo size={'1.75rem'} color={iconsColor} />
+                                    < Logo name={'docker'} size={'1.75rem'} color={iconsColor} />
                                     <div>Docker</div>
                                 </div>
                             </li>

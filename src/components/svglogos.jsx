@@ -507,26 +507,64 @@ const PythonLogo = (props) => (
     </svg>
 )
 
-export {
-    HtmlLogo,
-    CssLogo,
-    JSlogo,
-    TypesriptLogo,
-    ReactLogo,
-    NextLogo,
-    ReduxLogo,
-    SassLogo,
-    TailwindLogo,
-    NodeLogo,
-    ExpressLogo,
-    MongoLogo,
-    PostgresLogo,
-    MysqlLogo,
-    FirebaseLogo,
-    GitLogo,
-    GithubLogo,
-    KubernetesLogo,
-    DockerLogo,
-    PythonLogo,
-    SQLlogo
-} 
+const Logo = ({ name, size, color, secondColor }) => {
+    let logoName = name.toLowerCase();
+    switch (logoName) {
+        case 'html5':
+        case 'html':
+            return <HtmlLogo size={size} color={color} secondColor={secondColor} />;
+        case 'css3':
+        case 'css':
+            return <CssLogo size={size} color={color} secondColor={secondColor} />;
+        case 'javascript':
+        case 'js':
+            return <JSlogo size={size} color={color} secondColor={secondColor} />;
+        case 'typescript':
+            return <TypesriptLogo size={size} color={color} secondColor={secondColor} />;
+        case 'reactjs':
+        case 'react':
+            return <ReactLogo size={size} color={color} secondColor={secondColor} />;
+        case 'nextjs':
+        case 'next':
+            return <NextLogo size={size} color={color} secondColor={secondColor} />;
+        case 'redux':
+            return <ReduxLogo size={size} color={color} secondColor={secondColor} />;
+        case 'sass':
+            return <SassLogo size={size} color={color} secondColor={secondColor} />;
+        case 'tailwindcss':
+        case 'tailwind':
+            return <TailwindLogo size={size} color={color} secondColor={secondColor} />;
+        case 'nodejs':
+        case 'node':
+            return <NodeLogo size={size} color={color} secondColor={secondColor} />;
+        case 'expressjs':
+        case 'express':
+            return <ExpressLogo size={size} color={color} secondColor={secondColor} />;
+        case 'mongodb':
+        case 'mongo':
+            return <MongoLogo size={size} color={color} secondColor={secondColor} />;
+        case 'postgresql':
+        case 'postgres':
+            return <PostgresLogo size={size} color={color} secondColor={secondColor} />;
+        case 'mysql':
+            return <MysqlLogo size={size} color={color} secondColor={secondColor} />;
+        case 'firebase':
+            return <FirebaseLogo size={size} color={color} secondColor={secondColor} />;
+        case 'git':
+            return <GitLogo size={size} color={color} secondColor={secondColor} />;
+        case 'github':
+            return <GithubLogo size={size} color={color} secondColor={secondColor} />;
+        case 'kubernetes':
+            return <KubernetesLogo size={size} color={color} secondColor={secondColor} />;
+        case 'docker':
+            return <DockerLogo size={size} color={color} secondColor={secondColor} />;
+        case 'python':
+            return <PythonLogo size={size} color={color} secondColor={secondColor} />;
+        case 'sql':
+            return <SQLlogo size={size} color={color} secondColor={secondColor} />;
+        default:
+            return null;
+    }
+};
+
+export default Logo;
