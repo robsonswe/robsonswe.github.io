@@ -14,7 +14,7 @@ const fireProjects = [
     },
     description: {
       default: 'FinTrack is a full-stack finance management application designed to help users keep track of their revenues, expenses, and accounts. The website is built using HTML, TailwindCSS, Typescript, and NextJS, while the backend is built using NodeJS, Typescript, and ExpressJS. The project utilizes a PostgreSQL database to store data, and it includes Docker instructions to simplify setup.',
-      pt: 'FinTrack é um aplicativo completo de gerenciamento financeiro projetado para ajudar os usuários a acompanhar suas receitas, despesas e contas. O site é construído usando HTML, TailwindCSS, Typescript e NextJS, enquanto o backend é construído usando NodeJS, Typescript e ExpressJS. O projeto utiliza um banco de dados PostgreSQL para armazenar dados e inclui instruções Docker para simplificar a configuração.',
+      pt: 'FinTrack é um aplicativo de gerenciamento financeiro projetado para ajudar os usuários a acompanhar suas receitas, despesas e contas. O site é construído usando HTML, TailwindCSS, Typescript e NextJS, enquanto o backend é construído usando NodeJS, Typescript e ExpressJS. O projeto utiliza um banco de dados PostgreSQL para armazenar dados e inclui instruções Docker para simplificar a configuração.',
     },
     techs: ['HTML', 'Tailwind', 'Typescript', 'NextJS', 'NodeJS', 'ExpressJS', 'Postgres', 'Docker'],
     github: 'https://github.com/ROSS1996/financemanager',
@@ -98,7 +98,7 @@ function Projects({ lang }) {
     if (item.screenshot) {
       const techList = item.techs.map((tech) => {
         return (
-          <li>< Icon name={tech.toLowerCase()} size={'1rem'} color={iconsColor} secondColor={secondColor} /></li>
+          <li title={tech}>< Icon name={tech} size={'1rem'} color={iconsColor} secondColor={secondColor} /></li>
         )
       })
       return (
@@ -114,6 +114,11 @@ function Projects({ lang }) {
               </ul>
             </div>
             <div><Image src={item.screenshot} width={200} height={200} alt={`Screenshot of ${item.name[lang] || item.name.default}`} /></div>
+          </div>
+          <div className="flex flex-row justify-center p-1 mb-1 text-sm border rounded-sm w-fit bg-lightgblue border-midgray">
+            <Link href="./projects/dummy" className="hidden px-2 border-r hover:underline underline-offset-2 border-midgray">{locale.details}</Link>
+            <Link href={item.preview} target='_blank' className="px-2 hover:underline underline-offset-2 border-midgray">{locale.live}</Link>
+            <Link href={item.github} target='_blank' className="px-2 border-l hover:underline underline-offset-2 border-midgray">{locale.source}</Link>
           </div>
         </div>
       )
