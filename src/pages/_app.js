@@ -1,13 +1,14 @@
 import '../styles/globals.css'
 
 import { Outfit, Ruda, Lobster, Exo } from '@next/font/google'
-const outfit = Outfit({ subsets: ['latin'] })
-const ruda = Ruda({ subsets: ['latin'] })
+const outfit = Outfit({ subsets: ['latin'], display: 'swap' })
+const ruda = Ruda({ subsets: ['latin'], display: 'swap' })
 const lobster = Lobster({
   weight: ['400'],
-  subsets: ['latin']
+  subsets: ['latin'],
+  display: 'swap'
 })
-const exo = Exo({ subsets: ['latin'] })
+const exo = Exo({ subsets: ['latin'], display: 'swap' })
 
 
 export default function App({ Component, pageProps }) {
