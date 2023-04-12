@@ -96,9 +96,9 @@ function Projects({ lang }) {
   const projectsList = fireProjects.map((item) => {
     let index = fireProjects.indexOf(item)
     if (item.screenshot) {
-      const techList = item.techs.map((tech) => {
+      const techList = item.techs.map((tech, index) => {
         return (
-          <li title={tech}>< Icon name={tech} size={'1rem'} color={iconsColor} secondColor={secondColor} /></li>
+          <li key={index} title={tech}>< Icon name={tech} size={'1rem'} color={iconsColor} secondColor={secondColor} /></li>
         )
       })
       return (
