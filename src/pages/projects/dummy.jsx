@@ -15,16 +15,7 @@ import image3 from "../../../public/images/781-900x900.jpg";
 let iconsColor = "#C0C1C8";
 let secondColor = "#2d2c40";
 
-import {
-    HtmlLogo,
-    CssLogo,
-    JSlogo,
-    TailwindLogo,
-    NodeLogo,
-    ExpressLogo,
-    MongoLogo,
-
-} from '../../components/svglogos'
+import Icon from "../../components/svgicons";
 
 import PageHead from "../../components/head"
 import Navbar from "../../components/navbar"
@@ -53,19 +44,19 @@ function Techs() {
                     <h2 className='self-center text-lg font-bold font-exo'>Frontend</h2>
                     <hr />
                     <ul className='flex flex-row flex-wrap w-full gap-4 p-4 text-center opacity-70'>
-                        <li className='flex items-center gap-1'><HtmlLogo size='1.5rem' color={iconsColor} secondColor={secondColor} />HTML</li>
-                        <li className='flex items-center gap-1'><CssLogo size='1.5rem' color={iconsColor} secondColor={secondColor} />CSS</li>
-                        <li className='flex items-center gap-1'><JSlogo size='1.5rem' color={iconsColor} secondColor={secondColor} />Javascript</li>
-                        <li className='flex items-center gap-1'><TailwindLogo size='1.5rem' color={iconsColor} />TailwindCSS</li>
+                        <li className='flex items-center gap-1'>< Icon name={'html'} size={'1.5rem'} color={iconsColor} secondColor={secondColor} />HTML</li>
+                        <li className='flex items-center gap-1'>< Icon name={'css'} size={'1.5rem'} color={iconsColor} secondColor={secondColor} />CSS</li>
+                        <li className='flex items-center gap-1'>< Icon name={'jvascript'} size={'1.5rem'} color={iconsColor} secondColor={secondColor} />Javascript</li>
+                        <li className='flex items-center gap-1'>< Icon name={'tailwind'} size={'1.5rem'} color={iconsColor} secondColor={secondColor} />TailwindCSS</li>
                     </ul>
                 </div>
                 <div>
                     <h2 className='self-center text-lg font-bold font-exo'>Backend</h2>
                     <hr />
                     <ul className='flex flex-row flex-wrap w-full p-4 text-center opacity-70 gap-7'>
-                        <li className='flex items-center gap-1'><NodeLogo size='1.5rem' color={iconsColor} />NodeJS</li>
-                        <li className='flex items-center gap-1'><ExpressLogo size='1.5rem' color={iconsColor} />ExpressJS</li>
-                        <li className='flex items-center gap-1'><MongoLogo size='1.5rem' color={iconsColor} secondColor={'#96969e'} />MongoDB</li>
+                        <li className='flex items-center gap-1'>< Icon name={'node'} size={'1.5rem'} color={iconsColor} secondColor={secondColor} />NodeJS</li>
+                        <li className='flex items-center gap-1'>< Icon name={'express'} size={'1.5rem'} color={iconsColor} secondColor={secondColor} />ExpressJS</li>
+                        <li className='flex items-center gap-1'>< Icon name={'mongo'} size={'1.5rem'} color={iconsColor} secondColor={'#96969e'} />MongoDB</li>
                     </ul>
                 </div>
             </div>
