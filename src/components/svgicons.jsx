@@ -507,7 +507,7 @@ const PythonLogo = (props) => (
     </svg>
 )
 
-const Logo = ({ name, size, color, secondColor }) => {
+const Icon = ({ name, size, color, secondColor }) => {
     let logoName = name.toLowerCase();
     switch (logoName) {
         case 'html5':
@@ -567,4 +567,4 @@ const Logo = ({ name, size, color, secondColor }) => {
     }
 };
 
-export default Logo;
+export default Icon;
