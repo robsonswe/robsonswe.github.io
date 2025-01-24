@@ -29,7 +29,7 @@ export default function Home() {
 
   return (
     <div className="font-mono text-lightgray bg-gblue">
-      <MetaData/>
+      <MetaData pageTitle='Robson Santana | Web Developer' />
       <Navbar />
 
       <main className="container px-4 py-8 mx-auto">

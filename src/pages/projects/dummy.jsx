@@ -16,8 +16,7 @@ let iconsColor = "#C0C1C8";
 let secondColor = "#2d2c40";
 
 import Icon from "../../components/svgicons";
-
-import PageHead from "../../components/head"
+import MetaData from "../../components/metadata";
 import Navbar from "../../components/navbar"
 
 
@@ -143,7 +142,7 @@ function Screenshots() {
 export default function Dummy() {
     return (
         <div className='flex flex-col bg-gblue text-lightgray font-ruda sm:flex-row sm:h-screen sm:overflow-hidden'>
-            < PageHead pageTitle='Project X' />
+            < MetaData pageTitle='Project X' />
             <header className='font-ruda sm:w-56'>
                 <Navbar page={'project'} />
             </header>
