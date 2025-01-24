@@ -22,6 +22,7 @@
     "react-i18next": "^15.4.0",
     "react-intl": "^6.3.2",
     "react-responsive-carousel": "^3.2.23",
+    "sharp": "^0.33.5",
     "yet-another-react-lightbox": "^2.2.6"
   },
   "devDependencies": {
