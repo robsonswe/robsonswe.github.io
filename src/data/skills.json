@@ -1,0 +1,82 @@
+[
+    {
+      "name": "HTML",
+      "iconname": "html",
+      "category": "language"
+    },
+    {
+      "name": "SQL",
+      "iconname": "sql",
+      "category": "language"
+    },
+    {
+      "name": "CSS",
+      "iconname": "css",
+      "category": "language"
+    },
+    {
+      "name": "Javascript",
+      "iconname": "javascript",
+      "category": "language"
+    },
+    {
+      "name": "Typescript",
+      "iconname": "typescript",
+      "category": "language"
+    },
+    {
+      "name": "Python",
+      "iconname": "python",
+      "category": "language"
+    },
+    {
+      "name": "Sass",
+      "iconname": "sass",
+      "category": "framework"
+    },
+    {
+      "name": "Tailwind",
+      "iconname": "tailwind",
+      "category": "framework"
+    },
+    {
+      "name": "ExpressJS",
+      "iconname": "expressjs",
+      "category": "framework"
+    },
+    {
+      "name": "NextJS",
+      "iconname": "nextjs",
+      "category": "framework"
+    },
+    {
+      "name": "React",
+      "iconname": "reactjs",
+      "category": "framework"
+    },
+    {
+      "name": "NodeJS",
+      "iconname": "nodejs",
+      "category": "tool"
+    },
+    {
+      "name": "PostgresSQL",
+      "iconname": "postgres",
+      "category": "tool"
+    },
+    {
+      "name": "MySQL",
+      "iconname": "mysql",
+      "category": "tool"
+    },
+    {
+      "name": "Git",
+      "iconname": "git",
+      "category": "tool"
+    },
+    {
+      "name": "Docker",
+      "iconname": "docker",
+      "category": "tool"
+    }
+  ]
