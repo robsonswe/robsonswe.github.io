@@ -1,3 +1,4 @@
+import { useMemo } from 'react';
 import { useTranslation } from 'react-i18next';
 import Image from "next/image";
 import Link from 'next/link';
@@ -12,9 +13,46 @@ export default function Projects() {
   const { t } = useTranslation();
   const { projectsData, loading, error } = useProjects();
 
+  const sortedProjects = useMemo(() => {
+    if (!projectsData) return [];
+
+    const featuredWithOrder = [];
+    const featuredWithoutOrder = [];
+    const regularWithOrder = [];
+    const regularWithoutOrder = [];
+
+    projectsData.forEach(project => {
+      if (project.featured) {
+        project.sorting_order >= 0
+          ? featuredWithOrder.push(project)
+          : featuredWithoutOrder.push(project);
+      } else {
+        project.sorting_order >= 0
+          ? regularWithOrder.push(project)
+          : regularWithoutOrder.push(project);
+      }
+    });
+
+    featuredWithOrder.sort((a, b) => a.sorting_order - b.sorting_order);
+    featuredWithoutOrder.sort((a, b) =>
+      getProjectName(a).localeCompare(getProjectName(b))
+    );
+    regularWithOrder.sort((a, b) => a.sorting_order - b.sorting_order);
+    regularWithoutOrder.sort((a, b) =>
+      getProjectName(a).localeCompare(getProjectName(b))
+    );
+
+    return [
+      ...featuredWithOrder,
+      ...featuredWithoutOrder,
+      ...regularWithOrder,
+      ...regularWithoutOrder
+    ];
+  }, [projectsData]);
+
+
   if (error) console.error('Error fetching projects:', error);
 
-  // ProjectItem rendering logic (coupled with Projects component)
   const renderProjectItem = (item) => {
     if (!item?.screenshot || !item?.name || !item?.description) return null;
 
@@ -70,7 +108,7 @@ export default function Projects() {
       <h1 className="text-2xl font-bold">{t('projects.title')}</h1>
       <div id="projectsList" className="flex flex-col gap-6 my-1">
         {
-          loading ? <div>Loading projects...</div> : projectsData?.map(renderProjectItem)}
+          loading ? <div>Loading projects...</div> : sortedProjects.map(renderProjectItem)}
       </div>
       <div className="flex flex-row self-center justify-center p-1 mb-1 text-sm border rounded w-fit bg-lightgblue border-midgray">
         <div>
