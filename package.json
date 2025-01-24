@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@next/font": "^13.1.1",
+    "@supabase/supabase-js": "^2.48.1",
     "eslint": "8.31.0",
     "eslint-config-next": "13.1.1",
     "i18next": "^24.2.1",
