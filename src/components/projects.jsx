@@ -12,7 +12,6 @@ export default function Projects() {
   const { t } = useTranslation();
   const { projectsData, loading, error } = useProjects();
 
-  if (loading) return <div>Loading projects...</div>;
   if (error) console.error('Error fetching projects:', error);
 
   // ProjectItem rendering logic (coupled with Projects component)
@@ -42,11 +41,11 @@ export default function Projects() {
             </ul>
           </div>
           <div>
-            <Image 
-              src={item.screenshot} 
-              width={200} 
-              height={200} 
-              alt={`Screenshot of ${item.name[t('language')] || item.name.default || 'project'}`} 
+            <Image
+              src={item.screenshot}
+              width={200}
+              height={200}
+              alt={`Screenshot of ${item.name[t('language')] || item.name.default || 'project'}`}
             />
           </div>
         </div>
@@ -70,7 +69,8 @@ export default function Projects() {
     <section id="projects" className="flex flex-col ml-2">
       <h1 className="text-2xl font-bold">{t('projects.title')}</h1>
       <div id="projectsList" className="flex flex-col gap-6 my-1">
-        {projectsData?.map(renderProjectItem)}
+        {
+          loading ? <div>Loading projects...</div> : projectsData?.map(renderProjectItem)}
       </div>
       <div className="flex flex-row self-center justify-center p-1 mb-1 text-sm border rounded w-fit bg-lightgblue border-midgray">
         <div>
