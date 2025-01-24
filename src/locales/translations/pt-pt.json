@@ -1,0 +1,32 @@
+{
+    "about": {
+        "title": "Sobre",
+        "paragraphs": [
+            "Olá, eu sou o Robson. Sou um desenvolvedor dedicado que se esforça por construir excelentes aplicações que proporcionem uma experiência intuitiva para o utilizador final. A minha experiência em desenvolvimento front-end inclui o uso de HTML, CSS e JavaScript, bem como ferramentas de desenvolvimento modernas, como o Tailwind CSS para estilização eficiente, o Sass para um CSS mais organizado e o TypeScript para código escalável e sustentável. Além disso, tenho proficiência em frameworks populares como o React e o Next.js para criar aplicações web dinâmicas e escaláveis.",
+            "Os meus conhecimentos também se estendem ao desenvolvimento de back-end, utilizando Node.js e bases de dados relacionais, como o MySQL e o PostgreSQL. Tenho competências em web scraping e automação, utilizando Python para criar scripts que recolhem e processam dados de forma rápida.",
+            "Sou um solucionador de problemas orientado para os detalhes, com uma forte ética de trabalho e uma paixão pela criação de aplicações eficientes e de alta qualidade. Estou sempre disponível para aprender novas tecnologias e frameworks para me manter atualizado no panorama tecnológico em constante evolução e esforço-me continuamente por melhorar as minhas competências e conhecimentos. Se estás à procura de um programador dedicado e motivado que possa trazer valor, contacta-me."
+        ]
+    },
+    "contact": {
+        "title": "Contacto"
+    },
+    "navbar": {
+        "about": "Sobre",
+        "skills": "Competências",
+        "projects": "Projetos",
+        "contact": "Contacto"
+    },
+    "projects": {
+        "title": "Projetos",
+        "frontend": "Projetos Frontend",
+        "all": "Todos os Projetos",
+        "details": "Detalhes",
+        "live": "Versão Online",
+        "source": "Código Fonte"
+    },
+    "skills": {
+        "title": "Competências Técnicas",
+        "languages": "Linguagens",
+        "tools": "Ferramentas"
+    }
+}

@@ -1,0 +1,32 @@
+{
+  "about": {
+    "title": "Sobre",
+    "paragraphs": [
+      "Olá, meu nome é Robson. Sou um desenvolvedor dedicado a construir aplicações de excelência, proporcionando uma experiência intuitiva para o usuário final. Minha experiência em desenvolvimento front-end inclui o uso de HTML, CSS e JavaScript, bem como de ferramentas de desenvolvimento modernas, como Tailwind CSS para uma estilização eficiente, Sass para CSS organizado e TypeScript para um código escalável e de fácil manutenção. Além disso, tenho proficiência em estruturas populares como React e Next.js para criar aplicativos da Web dinâmicos e escaláveis.",
+      "Meu conhecimento também se estende ao desenvolvimento back-end, utilizando Node.js e bancos de dados relacionais como MySQL e PostgreSQL. Tenho habilidades em web scraping e automação, utilizando Python para criar scripts que coletam e processam dados rapidamente.",
+      "Sou um profissional focado em solucionar problemas com atenção aos detalhes e uma postura determinada e dedicada ao trabalho. Estou sempre disponível para aprender novas tecnologias e métodos para me manter atualizado no cenário tecnológico em constante evolução e me esforço continuamente para aprimorar minhas habilidades e conhecimentos. Se estiver procurando por um desenvolvedor dedicado e motivado que possa agregar valor, entre em contato comigo."
+    ]
+  },
+  "contact": {
+    "title": "Contato"
+  },
+  "navbar": {
+    "about": "Sobre",
+    "skills": "Conhecimentos",
+    "projects": "Projetos",
+    "contact": "Contato"
+  },
+  "projects": {
+    "title": "Projetos",
+    "frontend": "Projetos Frontend",
+    "all": "Todos Projetos",
+    "details": "Detalhes",
+    "live": "Prévia",
+    "source": "Código Fonte"
+  },
+  "skills": {
+    "title": "Conhecimentos Técnicos",
+    "languages": "Linguagens",
+    "tools": "Ferramentas"
+  }
+}
