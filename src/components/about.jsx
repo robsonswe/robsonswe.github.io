@@ -1,20 +1,24 @@
-import { useTranslation } from 'react-i18next';
+import { useTranslation } from "react-i18next"
 
-function About() {
-  const { t } = useTranslation();
-
-  const paragraphs = t('about.paragraphs', { returnObjects: true });
+export default function About() {
+  const { t } = useTranslation()
+  const paragraphs = t("about.paragraphs", { returnObjects: true })
 
   return (
-    <section id="about" className="ml-2">
-      <h2 className="text-2xl font-bold">{t('about.title')}</h2>
-      <div className="flex flex-col gap-2 p-4 mt-1 rounded bg-lightgblue">
+    <section id="about" className="h-full">
+      <h2 className="pb-4 mb-6 text-5xl font-bold border-b text-lightgray border-midgray">
+        {t("about.title").toUpperCase()}
+      </h2>
+      <div className="space-y-6 text-lg leading-relaxed">
         {paragraphs.map((paragraph, index) => (
-          <p key={index} className="text-justify">{paragraph}</p>
+          <p 
+            key={index} 
+            className="p-6 border rounded-lg bg-lightgblue border-midgray"
+          >
+            {paragraph}
+          </p>
         ))}
       </div>
     </section>
-  );
+  )
 }
-
-export default About;

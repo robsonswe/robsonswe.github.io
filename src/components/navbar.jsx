@@ -1,41 +1,28 @@
-import { useTranslation } from 'react-i18next';
-import Link from "next/link";
+import Link from 'next/link'
+import { useTranslation } from 'react-i18next'
 
-function Index() {
-  const { t } = useTranslation();
+export default function Navbar() {
+  const { t } = useTranslation()
 
   return (
-    <>
-      <li><a href="#about" className='flex items-center gap-1 p-1 rounded sm:text-2xl hover:bg-lightgblue'>{t('navbar.about')}</a></li>
-      <li><a href="#skills" className='flex items-center gap-1 p-1 rounded sm:text-2xl hover:bg-lightgblue'>{t('navbar.skills')}</a></li>
-      <li><a href="#projects" className='flex items-center gap-1 p-1 rounded sm:text-2xl hover:bg-lightgblue'>{t('navbar.projects')}</a></li>
-      <li><a href="#contact" className='flex items-center gap-1 p-1 rounded sm:text-2xl hover:bg-lightgblue'>{t('navbar.contact')}</a></li>
-    </>
-  );
-}
-
-function Projects() {
-  return (
-    <>
-      <li><a href="#about" className='p-1 rounded sm:text-2xl hover:bg-lightgblue'>About</a></li>
-      <li><a href="#techs" className='p-1 rounded sm:text-2xl hover:bg-lightgblue'>Techs</a></li>
-      <li><a href="#screenshots" className='p-1 rounded sm:text-2xl hover:bg-lightgblue'>Screenshots</a></li>
-      <li>
-        <Link href='/' className='flex items-center gap-1 p-1 rounded sm:text-base hover:bg-lightgblue'>Return to Index</Link>
-      </li>
-    </>
-  );
-}
-
-function Navbar({ page }) {
-  return (
-    <nav className="flex flex-col gap-2 border-r border-midgray sm:h-screen sm:p-6 sm:text-right sm:gap-20">
-      <h1 className="text-5xl text-center sm:text-left">Robson <span className="sm:text-4xl">Santana</span></h1>
-      <ul className="flex flex-row justify-center gap-4 sm:flex-col sm:items-end">
-        {page === 'index' ? <Index /> : <Projects />}
-      </ul>
+    <nav className="sticky top-0 z-10 border-b border-midgray bg-gblue/90 backdrop-blur-sm">
+      <div className="container flex flex-col items-center justify-between px-4 py-4 mx-auto sm:flex-row">
+        <h1 className="mb-4 text-4xl font-bold text-lightgray sm:mb-0">
+          ROBSON SANTANA
+        </h1>
+        <ul className="flex flex-wrap justify-center gap-6">
+          {['about', 'skills', 'projects', 'contact'].map((item) => (
+            <li key={item} className="text-xl uppercase">
+              <a 
+                href={`#${item}`} 
+                className="px-3 py-1 transition-all duration-300 rounded-lg text-lightgray hover:bg-lightgblue"
+              >
+                {t(`navbar.${item}`)}
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>
     </nav>
-  );
+  )
 }
-
-export default Navbar;

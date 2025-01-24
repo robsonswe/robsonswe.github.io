@@ -2,9 +2,7 @@
   "about": {
     "title": "About",
     "paragraphs": [
-      "Hi, I am Robson. I'm a dedicated developer who strives to build excellent applications that provide an intuitive experience for the end user. My expertise in front-end development includes using HTML, CSS, and JavaScript, as well as modern development tools such as Tailwind CSS for efficient styling, Sass for organized CSS, and TypeScript for scalable and maintainable code. Additionally, I have proficiency in popular frameworks like React and Next.js to build dynamic and scalable web applications.",
-      "My knowledge also extends to back-end development, using Node.js and relational databases such as MySQL and PostgreSQL. I have skills in web scraping and automation, using Python to create scripts that collect and process data quickly.",
-      "I'm a detail-oriented problem solver with a strong work ethic and a passion for creating high-quality, efficient applications. I'm always available to learn new technologies and methods to stay updated in the constantly evolving technological landscape and continually strive to improve my skills and knowledge. If you're looking for a dedicated and motivated developer who can bring value, contact me."
+      "I'm Robson, a developer focused on building intuitive and efficient applications. I’m driven by problem-solving, clean code, and delivering exceptional user experiences. Always eager to adapt and grow, I bring value and reliability to every project. If you’re looking for a dedicated developer, contact me."
     ]
   },
   "contact": {

@@ -1,24 +1,51 @@
-import i18n from "../locales/i18n";
-import PageHead from "../components/head";
-import Navbar from "../components/navbar";
-import About from "../components/about";
-import Projects from "../components/projects";
-import Contact from "../components/contact";
-import Skills from '../components/skills';
+import { useEffect } from "react"
+import i18n from "../locales/i18n"
+import MetaData from "../components/metadata"
+import Navbar from "../components/navbar"
+import About from "../components/about"
+import Projects from "../components/projects"
+import Contact from "../components/contact"
+import Skills from "../components/skills"
 
 export default function Home() {
+  useEffect(() => {
+    const handleHashChange = () => {
+      const hash = window.location.hash
+      if (hash) {
+        const element = document.querySelector(hash)
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" })
+        }
+      }
+    }
+
+    window.addEventListener("hashchange", handleHashChange)
+    handleHashChange()
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange)
+    }
+  }, [])
+
   return (
-    <div className='flex flex-col bg-gblue text-lightgray font-ruda sm:flex-row sm:h-screen sm:overflow-hidden'>
-      <PageHead pageTitle='Robson Santana' />
-      <header className='font-ruda sm:w-56'>
-        <Navbar page={'index'} />
-      </header>
-      <main className='flex flex-col gap-6 p-2 overflow-y-auto scroll-smooth font-outfit scrollbar-thin scrollbar-thumb-midgray scrollbar-thumb-rounded-full scrollbar-track-lightgray sm:p-6'>
-        <About />
+    <div className="font-mono text-lightgray bg-gblue">
+      <MetaData/>
+      <Navbar />
+
+      <main className="container px-4 py-8 mx-auto">
+        <div className="grid grid-cols-1 gap-8 mb-24 lg:grid-cols-2">
+          <About />
+          <Contact />
+        </div>
         <Skills />
         <Projects />
-        <Contact />
       </main>
+
+      <footer className="py-6 text-center border-t border-midgray">
+        <p className="text-sm">
+          © {new Date().getFullYear()} Robson Santana. All rights reserved.<br />
+        </p>
+      </footer>
     </div>
-  );
+  )
 }

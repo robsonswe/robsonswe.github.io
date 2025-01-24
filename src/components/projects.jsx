@@ -1,127 +1,94 @@
-import { useMemo } from 'react';
-import { useTranslation } from 'react-i18next';
-import Image from "next/image";
-import Link from 'next/link';
-import Icon from "./svgicons";
-import { useProjects } from '../hooks/useProjects';
+const ICONS_COLOR = "#C0C1C8"
+const SECOND_COLOR = "#2D2C40"
 
-// Constants (moved outside the component)
-const iconsColor = "#C0C1C8";
-const secondColor = "#2D2C40";
+import { useTranslation } from "react-i18next"
+import Image from "next/image"
+import Link from "next/link"
+import Icon from "./svgicons"
+import { useProjects } from "../hooks/useProjects"
+import { sortProjects } from "../utils/sortProjects"
+import { BoxArrowUpRight, Github, CodeSlash } from "react-bootstrap-icons"
 
 export default function Projects() {
-  const { t } = useTranslation();
-  const { projectsData, loading, error } = useProjects();
+  const { t } = useTranslation()
+  const { projectsData, loading, error } = useProjects()
+  const getProjectName = (project) => project.name[t("language")] || project.name.default || "Untitled Project"
 
-  const sortedProjects = useMemo(() => {
-    if (!projectsData) return [];
-
-    const featuredWithOrder = [];
-    const featuredWithoutOrder = [];
-    const regularWithOrder = [];
-    const regularWithoutOrder = [];
-
-    projectsData.forEach(project => {
-      if (project.featured) {
-        project.sorting_order >= 0
-          ? featuredWithOrder.push(project)
-          : featuredWithoutOrder.push(project);
-      } else {
-        project.sorting_order >= 0
-          ? regularWithOrder.push(project)
-          : regularWithoutOrder.push(project);
-      }
-    });
-
-    featuredWithOrder.sort((a, b) => a.sorting_order - b.sorting_order);
-    featuredWithoutOrder.sort((a, b) =>
-      getProjectName(a).localeCompare(getProjectName(b))
-    );
-    regularWithOrder.sort((a, b) => a.sorting_order - b.sorting_order);
-    regularWithoutOrder.sort((a, b) =>
-      getProjectName(a).localeCompare(getProjectName(b))
-    );
-
-    return [
-      ...featuredWithOrder,
-      ...featuredWithoutOrder,
-      ...regularWithOrder,
-      ...regularWithoutOrder
-    ];
-  }, [projectsData]);
-
-
-  if (error) console.error('Error fetching projects:', error);
-
-  const renderProjectItem = (item) => {
-    if (!item?.screenshot || !item?.name || !item?.description) return null;
-
-    const techList = item.techs?.map((tech, index) => (
-      <li key={index} title={tech}>
-        <Icon name={tech} size="1rem" color={iconsColor} secondColor={secondColor} />
-      </li>
-    ));
-
-    return (
-      <div key={item.id || Math.random()}>
-        <div className="grid w-full grid-cols-[1fr_200px] mb-2 text-left rounded bg-lightgblue items-center md:items-start">
-          <div className="grid h-full grid-rows-[2fr_20px] gap-4 px-3 py-4">
-            <div className="grid grid-rows-[20px_1fr] gap-4 border-b">
-              <h2 className="font-bold">
-                {item.name[t('language')] || item.name.default || 'Untitled Project'}
-              </h2>
-              <p className="text-sm md:text-base">
-                {item.description[t('language')] || item.description.default || 'No description'}
-              </p>
-            </div>
-            <ul className='flex flex-row gap-4'>
-              {techList || <li>No technologies listed</li>}
-            </ul>
-          </div>
-          <div>
-            <Image
-              src={item.screenshot}
-              width={200}
-              height={200}
-              alt={`Screenshot of ${item.name[t('language')] || item.name.default || 'project'}`}
-            />
-          </div>
-        </div>
-        <div className="flex flex-row justify-center p-1 mb-1 text-sm border rounded-sm w-fit bg-lightgblue border-midgray">
-          {item.preview && (
-            <Link href={item.preview} target='_blank' className="px-2 hover:underline underline-offset-2 border-midgray">
-              {t('projects.live')}
-            </Link>
-          )}
-          {item.github && (
-            <Link href={item.github} target='_blank' className="px-2 border-l hover:underline underline-offset-2 border-midgray">
-              {t('projects.source')}
-            </Link>
-          )}
-        </div>
-      </div>
-    );
-  };
+  const sortedProjects = sortProjects(projectsData, getProjectName)
 
   return (
-    <section id="projects" className="flex flex-col ml-2">
-      <h1 className="text-2xl font-bold">{t('projects.title')}</h1>
-      <div id="projectsList" className="flex flex-col gap-6 my-1">
-        {
-          loading ? <div>Loading projects...</div> : sortedProjects.map(renderProjectItem)}
-      </div>
-      <div className="flex flex-row self-center justify-center p-1 mb-1 text-sm border rounded w-fit bg-lightgblue border-midgray">
-        <div>
-          <Link href='https://ross1996.github.io/frontend-projects/' target='_blank' className="px-2 border-r border-midgray hover:underline underline-offset-2">
-            {t('projects.frontend')}
-          </Link>
+    <section id="projects" className="my-24">
+      <h2 className="pb-4 mb-12 text-5xl font-bold border-b text-lightgray border-midgray">
+        {t("projects.title").toUpperCase()}
+      </h2>
+      {loading ? (
+        <div className="text-xl">Loading projects...</div>
+      ) : error ? (
+        <div className="text-xl">Error: {error}</div>
+      ) : (
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          {sortedProjects.map((project) => (
+            <div 
+              key={project.id} 
+              className="flex flex-col h-full p-6 border rounded-lg bg-lightgblue border-midgray"
+            >
+              <div className="flex-1">
+                <h3 className="mb-4 text-2xl font-bold text-lightgray">{getProjectName(project)}</h3>
+                <div className="relative mb-6 overflow-hidden rounded-lg aspect-video">
+                  <Image
+                    src={project.screenshot || "/placeholder.svg"}
+                    fill
+                    alt={`Screenshot of ${getProjectName(project)}`}
+                    className="object-cover"
+                  />
+                </div>
+                <p className="mb-6 text-lightgray">{project.description[t("language")] || project.description.default}</p>
+                <div className="flex flex-wrap gap-3 mb-6">
+                  {project.techs?.map((tech) => (
+                    <span
+                      key={tech}
+                      className="flex items-center gap-2 px-3 py-1 rounded-full bg-gblue"
+                    >
+                      <Icon
+                        name={tech}
+                        size="1.25rem"
+                        color={ICONS_COLOR}
+                        secondColor={SECOND_COLOR}
+                      />
+                      <span className="text-sm text-lightgray">{tech}</span>
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="mt-auto">
+                <div className="flex gap-4">
+                  {project.preview && (
+                    <Link
+                      href={project.preview}
+                      target="_blank"
+                      className="flex items-center justify-center w-full gap-2 px-4 py-2 text-center border rounded-lg border-midgray text-lightgray hover:bg-midgray"
+                    >
+                      <BoxArrowUpRight className="w-5 h-5" />
+                      <span>{t("projects.live")}</span>
+                    </Link>
+                  )}
+                  {project.github && (
+                    <Link
+                      href={project.github}
+                      target="_blank"
+                      className="flex items-center justify-center w-full gap-2 px-4 py-2 text-center border rounded-lg border-midgray text-lightgray hover:bg-midgray"
+                    >
+                      <CodeSlash className="w-5 h-5" />
+                      <span>{t("projects.source")}</span>
+                    </Link>
+                  )}
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-        <div>
-          <Link href='https://github.com/ROSS1996?tab=repositories' target='_blank' className="px-2 hover:underline underline-offset-2">
-            {t('projects.all')}
-          </Link>
-        </div>
-      </div>
+      )}
     </section>
-  );
+  )
 }
