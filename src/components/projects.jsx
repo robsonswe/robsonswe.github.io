@@ -4,7 +4,7 @@ import Link from "next/link"
 import Icon from "./svgicons"
 import { useProjects } from "../hooks/useProjects"
 import { sortProjects } from "../utils/sortProjects"
-import { ExternalLink, Github, Code, Folder } from "lucide-react"
+import { ExternalLink, Code, Folder } from "lucide-react"
 
 const ICONS_COLOR = "#C0C1C8"
 const SECOND_COLOR = "#2D2C40"
