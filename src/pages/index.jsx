@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
 import i18n from "../locales/i18n"
 import MetaData from "../components/metadata"
 import Navbar from "../components/navbar"
@@ -6,8 +6,24 @@ import About from "../components/about"
 import Projects from "../components/projects"
 import Contact from "../components/contact"
 import Skills from "../components/skills"
+import { ArrowUp } from "lucide-react"
 
 export default function Home() {
+  const [showBackToTop, setShowBackToTop] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowBackToTop(window.scrollY > 300)
+    }
+
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" })
+  }
+
   useEffect(() => {
     const handleHashChange = () => {
       const hash = window.location.hash
@@ -28,8 +44,8 @@ export default function Home() {
   }, [])
 
   return (
-    <div className="font-mono text-lightgray bg-gblue">
-      <MetaData pageTitle='Robson Santana | Web Developer' />
+    <div className="min-h-screen font-mono text-lightgray bg-gblue bg-opacity-95 bg-[url('/subtle-pattern.png')] bg-repeat">
+      <MetaData pageTitle="Robson Santana | Web Developer" />
       <Navbar />
 
       <main className="container px-4 py-8 mx-auto">
@@ -42,10 +58,19 @@ export default function Home() {
       </main>
 
       <footer className="py-6 text-center border-t border-midgray">
-        <p className="text-sm">
-          © {new Date().getFullYear()} Robson Santana. All rights reserved.<br />
-        </p>
+        <p className="text-sm">© {new Date().getFullYear()} Robson Santana. All rights reserved.</p>
       </footer>
+
+      {showBackToTop && (
+        <button
+          onClick={scrollToTop}
+          className="fixed p-2 transition-all duration-300 rounded-full shadow-lg bottom-4 right-4 bg-lightgblue hover:bg-midgray"
+          aria-label="Back to top"
+        >
+          <ArrowUp size={24} className="text-gblue" />
+        </button>
+      )}
     </div>
   )
 }
+
