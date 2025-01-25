@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 
-import { Outfit, Ruda, Lobster, Exo } from '@next/font/google'
+import { Outfit, Ruda, Lobster, Exo } from 'next/font/google'
 const outfit = Outfit({ subsets: ['latin'], display: 'swap' })
 const ruda = Ruda({ subsets: ['latin'], display: 'swap' })
 const lobster = Lobster({

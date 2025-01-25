@@ -1,3 +1,17 @@
-@tailwind base;
-@tailwind components;
+@import "tailwindcss";
 @tailwind utilities;
+
+@theme {
+    --color-deepblue: #0A091B;
+    --color-lightgray: #C0C1C8;
+    --color-lightblue: #02BBD9;
+    --color-gblue: #212130;
+    --color-lightgblue: #2d2c40;
+    --color-midgray: #424350;
+    --font-outfit: var(--outfit-font), sans-serif;
+    --font-ruda: var(--ruda-font), sans-serif;
+    --font-lobster: var(--lobster-font), sans-serif;
+    --font-exo: var(--exo-font), sans-serif;
+  
+  }
+  
