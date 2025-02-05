@@ -12,7 +12,13 @@ const SECOND_COLOR = "#2D2C40"
 export default function Projects() {
   const { t } = useTranslation()
   const { projectsData, loading, error } = useProjects()
+  
   const getProjectName = (project) => project.name[t("language")] || project.name.default || "Untitled Project"
+
+  // Log the error if it exists
+  if (error) {
+    console.error("Error loading projects:", error)
+  }
 
   const sortedProjects = sortProjects(projectsData, getProjectName)
 
@@ -24,8 +30,6 @@ export default function Projects() {
       </h2>
       {loading ? (
         <div className="text-xl">Loading projects...</div>
-      ) : error ? (
-        <div className="text-xl">Error: {error}</div>
       ) : (
         <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {sortedProjects.map((project) => (
@@ -85,4 +89,3 @@ export default function Projects() {
     </section>
   )
 }
-

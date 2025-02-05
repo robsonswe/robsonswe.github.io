@@ -17,6 +17,11 @@ export default function Skills() {
     tool: <PenTool size={24} />,
   }
 
+  // Log the error if it exists
+  if (error) {
+    console.error("Error loading skills:", error)
+  }
+
   return (
     <section id="skills" className="my-24">
       <h2 className="flex items-center pb-4 mb-12 text-3xl font-bold border-b-2 text-lightgray border-midgray">
@@ -25,8 +30,6 @@ export default function Skills() {
       </h2>
       {loading ? (
         <div className="text-xl">Loading skills...</div>
-      ) : error ? (
-        <div className="text-xl">Error: {error}</div>
       ) : (
         <div className="grid gap-8 md:grid-cols-3">
           {categories.map((category) => (
@@ -59,4 +62,3 @@ export default function Skills() {
     </section>
   )
 }
-
