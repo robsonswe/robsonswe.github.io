@@ -24,6 +24,7 @@
     "react-intl": "7.1.5",
     "react-responsive-carousel": "^3.2.23",
     "sharp": "^0.33.5",
+    "tailwind-scrollbar": "^4.0.0",
     "yet-another-react-lightbox": "3.21.7"
   },
   "devDependencies": {

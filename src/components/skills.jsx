@@ -17,25 +17,24 @@ export default function Skills() {
     tool: <PenTool size={24} />,
   }
 
-  // Log the error if it exists
   if (error) {
     console.error("Error loading skills:", error)
   }
 
   return (
     <section id="skills" className="my-24">
-      <h2 className="flex items-center pb-4 mb-12 text-3xl font-bold border-b-2 text-lightgray border-midgray">
+      <h2 className="flex items-center pb-4 mb-6 text-3xl font-bold border-b-2 text-lightgray border-midgray">
         <Code className="mr-2" size={28} />
         {t("skills.title").toUpperCase()}
       </h2>
       {loading ? (
         <div className="text-xl">Loading skills...</div>
       ) : (
-        <div className="grid gap-8 md:grid-cols-3">
-          {categories.map((category) => (
+<div className="flex gap-6 pb-4 overflow-x-auto scrollbar scrollbar-thumb-gray-400 scrollbar-track-gray-200 sm:overflow-visible sm:grid sm:grid-cols-3 sm:gap-8 flex-nowrap">
+{categories.map((category) => (
             <div
               key={category}
-              className="p-6 transition-all duration-300 border rounded-lg shadow-md bg-lightgblue border-midgray hover:shadow-lg"
+              className="min-w-[320px] lg:min-w-0 p-6 transition-all duration-300 border rounded-lg shadow-md bg-lightgblue border-midgray hover:shadow-lg"
             >
               <h3 className="flex items-center mb-6 text-2xl font-bold text-lightgray">
                 {categoryIcons[category]}
