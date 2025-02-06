@@ -4,10 +4,9 @@ import MetaData from "../components/metadata"
 import Navbar from "../components/navbar"
 import About from "../components/about"
 import Projects from "../components/projects"
-import Contact from "../components/contact"
 import Skills from "../components/skills"
 import { ArrowUp } from "lucide-react"
-import Hero from "../components/Hero"
+import Hero from "../components/hero"
 
 export default function Home() {
   const [showBackToTop, setShowBackToTop] = useState(false)

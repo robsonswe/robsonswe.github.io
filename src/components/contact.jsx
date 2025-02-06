@@ -1,42 +1,54 @@
-import { useTranslation } from "react-i18next";
-import { Github, Linkedin, Mail } from "lucide-react";
+import { useTranslation } from "react-i18next"
+import { Github, Linkedin, Mail } from "lucide-react"
 
 const contactLinks = [
   {
-    id: "email",
+    id: 'email',
     Icon: Mail,
-    href: "mailto:robsonssdev@gmail.com",
+    label: 'robsonssdev@gmail.com',
+    href: 'mailto:robsonssdev@gmail.com',
   },
   {
-    id: "linkedin",
+    id: 'linkedin',
     Icon: Linkedin,
-    href: "http://linkedin.com/in/robsonossantana/",
+    label: 'linkedin.com/in/robsonossantana',
+    href: 'http://linkedin.com/in/robsonossantana/',
   },
   {
-    id: "github",
+    id: 'github',
     Icon: Github,
-    href: "https://github.com/ROSS1996",
+    label: 'github.com/ROSS1996',
+    href: 'https://github.com/ROSS1996',
   },
-];
+]
 
 export default function Contact() {
-  const { t } = useTranslation();
+  const { t } = useTranslation()
 
   return (
-    <section id="contact" className="my-2">
-      <div className="flex justify-center gap-6 p-6 transition-all duration-300 rounded-lg">
-        {contactLinks.map(({ id, Icon, href }) => (
-          <a
-            key={id}
-            href={href}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center justify-center w-12 h-12 text-white transition-all duration-300 rounded-full shadow-md bg-midgray hover:bg-white hover:text-midgray"
-          >
-            <Icon size={24} />
-          </a>
-        ))}
+    <section id="contact" className="h-full">
+      <h2 className="flex items-center pb-4 mb-6 text-3xl font-bold border-b-2 text-lightgray border-midgray">
+        <Mail className="mr-2" size={28} />
+        {t("contact.title").toUpperCase()}
+      </h2>
+
+      <div className="p-6 space-y-6 text-lg transition-all duration-300 border rounded-lg shadow-md bg-lightgblue border-midgray hover:shadow-lg">
+        <ul className="space-y-4">
+          {contactLinks.map(({ id, Icon, label, href }) => (
+            <li key={id} className="flex items-center gap-4">
+              <Icon className="flex-shrink-0" size={24} />
+              <a
+                href={href}
+                target="_blank"
+                rel="noreferrer"
+                className="text-sm font-bold transition-all duration-300 sm:text-base text-lightgray hover:text-white hover:underline md:text-xl"
+              >
+                {label}
+              </a>
+            </li>
+          ))}
+        </ul>
       </div>
     </section>
-  );
+  )
 }
