@@ -11,14 +11,14 @@ const contactLinks = [
   {
     id: "linkedin",
     Icon: Linkedin,
-    href: "http://linkedin.com/in/robsonvm/",
-    username: "robsonvm",
+    href: "http://linkedin.com/in/robsonswe/",
+    username: "robsonswe",
   },
   {
     id: "github",
     Icon: Github,
-    href: "https://github.com/robsonvm",
-    username: "robsonvm",
+    href: "https://github.com/robsonswe",
+    username: "robsonswe",
   },
 ];
 
