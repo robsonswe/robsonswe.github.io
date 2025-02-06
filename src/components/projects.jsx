@@ -120,7 +120,7 @@ export default function Projects() {
 
           <div className="flex justify-center gap-4 mt-8">
             <Link
-              href="https://robsonvm.github.io/frontend-projects/"
+              href="https://robsonswe.github.io/frontend-projects/"
               target="_blank"
               className="flex items-center gap-2 px-4 py-2 text-sm font-medium transition-all duration-300 border rounded-md border-midgray text-lightgray hover:bg-midgray"
             >
@@ -128,7 +128,7 @@ export default function Projects() {
               Frontend Projects
             </Link>
             <Link
-              href="https://github.com/robsonvm?tab=repositories"
+              href="https://github.com/robsonswe?tab=repositories"
               target="_blank"
               className="flex items-center gap-2 px-4 py-2 text-sm font-medium transition-all duration-300 border rounded-md border-midgray text-lightgray hover:bg-midgray"
             >
