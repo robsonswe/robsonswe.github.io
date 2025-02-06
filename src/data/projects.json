@@ -10,9 +10,9 @@
             "pt-br": "FinTrack é um aplicativo de gerenciamento financeiro projetado para ajudar os usuários a acompanhar suas receitas, despesas e contas. O site é construído usando HTML, TailwindCSS, Typescript e NextJS, enquanto o backend é construído usando NodeJS, Typescript e ExpressJS. O projeto utiliza um banco de dados PostgreSQL para armazenar dados e inclui instruções Docker para simplificar a configuração."
         },
         "techs": ["HTML", "Tailwind", "Typescript", "NextJS", "NodeJS", "ExpressJS", "Postgres", "Docker"],
-        "github": "https://github.com/ROSS1996/financemanager",
-        "preview": "https://github.com/ROSS1996/financemanager/tree/main/website/screenshots",
-        "screenshot": "https://ross1996.github.io/frontend-projects/screenshots/financemanager.jpg",
+        "github": "https://github.com/robsonsdev/financemanager",
+        "preview": "https://github.com/robsonsdev/financemanager/tree/main/website/screenshots",
+        "screenshot": "https://robsonsdev.github.io/frontend-projects/screenshots/financemanager.jpg",
         "featured": false,
         "sorting_order": 1
     },
@@ -27,9 +27,9 @@
             "pt-br": "CS:Brasil é uma plataforma que fornece estatísticas essenciais sobre jogadores e equipes de esportes eletrônicos. O site é construído usando HTML, TailwindCSS, Typescript, React e NextJS. Scripts Python são usados para coletar e fornecer as informações para o projeto."
         },
         "techs": ["HTML", "Tailwind", "Typescript", "NextJS", "Python"],
-        "github": "https://github.com/ROSS1996/cs50xfinal",
+        "github": "https://github.com/robsonsdev/cs50xfinal",
         "preview": "https://cs50xfinal.vercel.app/",
-        "screenshot": "https://ross1996.github.io/frontend-projects/screenshots/esports.jpg",
+        "screenshot": "https://robsonsdev.github.io/frontend-projects/screenshots/esports.jpg",
         "featured": false,
         "sorting_order": 2
     },
@@ -46,9 +46,9 @@
             "pt-br": "IP Address Tracker é um projeto que fornece informações sobre endereços IP. A plataforma é construída usando HTML, CSS e JavaScript e utiliza a biblioteca LeafletJS para mapear visualmente os endereços IP."
         },
         "techs": ["HTML", "CSS", "Javascript"],
-        "github": "https://github.com/ROSS1996/frontend-projects/tree/iptrack-int",
-        "preview": "https://ross1996.github.io/frontend-projects/iptrack-int",
-        "screenshot": "https://ross1996.github.io/frontend-projects/screenshots/iptrack-int.jpg",
+        "github": "https://github.com/robsonsdev/frontend-projects/tree/iptrack-int",
+        "preview": "https://robsonsdev.github.io/frontend-projects/iptrack-int",
+        "screenshot": "https://robsonsdev.github.io/frontend-projects/screenshots/iptrack-int.jpg",
         "featured": false,
         "sorting_order": 3
     },
@@ -63,9 +63,9 @@
             "pt-br": "Shortly é um projeto que fornece uma solução de encurtamento de URLs. A plataforma é construída usando HTML, CSS, Sass e React."
         },
         "techs": ["HTML", "CSS", "Sass", "React"],
-        "github": "https://github.com/ROSS1996/frontend-projects/tree/linkshort-int",
-        "preview": "https://ross1996.github.io/frontend-projects/linkshort-int",
-        "screenshot": "https://ross1996.github.io/frontend-projects/screenshots/linkshort-int.jpg",
+        "github": "https://github.com/robsonsdev/frontend-projects/tree/linkshort-int",
+        "preview": "https://robsonsdev.github.io/frontend-projects/linkshort-int",
+        "screenshot": "https://robsonsdev.github.io/frontend-projects/screenshots/linkshort-int.jpg",
         "featured": false,
         "sorting_order": 4
     }
