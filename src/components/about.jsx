@@ -11,8 +11,8 @@ const contactLinks = [
   {
     id: "linkedin",
     Icon: Linkedin,
-    href: "http://linkedin.com/in/robsonossantana/",
-    username: "robsonossantana",
+    href: "http://linkedin.com/in/robsonvm/",
+    username: "robsonvm",
   },
   {
     id: "github",
