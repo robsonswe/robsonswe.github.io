@@ -7,7 +7,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'robsonodev.github.io',
+        hostname: 'robsonvm.github.io',
       },
       {
         protocol: 'https',
