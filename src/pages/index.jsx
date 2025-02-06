@@ -7,6 +7,7 @@ import Projects from "../components/projects"
 import Contact from "../components/contact"
 import Skills from "../components/skills"
 import { ArrowUp } from "lucide-react"
+import Hero from "../components/Hero"
 
 export default function Home() {
   const [showBackToTop, setShowBackToTop] = useState(false)
@@ -45,14 +46,12 @@ export default function Home() {
 
   return (
     <div className="min-h-screen font-mono text-lightgray bg-gblue bg-opacity-95 bg-[url('/subtle-pattern.png')] bg-repeat">
-      <MetaData pageTitle="Robson Santana | Web Developer" />
+      <MetaData pageTitle="Robson Santana | Software Engineer" />
       <Navbar />
 
       <main className="container px-4 py-8 mx-auto">
-        <div className="grid grid-cols-1 gap-8 mb-24 lg:grid-cols-2">
-          <About />
-          <Contact />
-        </div>
+        <Hero />
+        <About />
         <Skills />
         <Projects />
       </main>
