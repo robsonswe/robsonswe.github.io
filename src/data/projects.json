@@ -37,7 +37,8 @@
         "id": 3,
         "name": {
             "default": "IP Address Tracker",
-            "pt": "Localizador de IPs"
+            "pt": "Localizador de IPs",
+            "pt-br": "Localizador de IPs"
         },
         "description": {
             "default": "IP Address Tracker is a project that provides information about IP addresses. The platform is built using HTML, CSS, and JavaScript and utilizes the LeafletJS library to map IP addresses visually.",
