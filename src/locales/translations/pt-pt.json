@@ -5,6 +5,12 @@
             "Sou o Robson, um programador focado em desenvolver aplicações intuitivas e eficientes. Sou motivado pela resolução de problemas, código limpo e pela entrega de experiências excepcionais aos utilizadores. Sempre pronto para me adaptar e evoluir, acrescento valor e fiabilidade a cada projeto. Se procura um programador dedicado, não hesite em contactar-me."
         ]
     },
+    "hero": {
+        "titles": [
+            "Engenheiro de Software",
+            "Solucionador de Problemas"
+        ]
+    },
     "contact": {
         "title": "Contacto"
     },

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { User, Github, Linkedin, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowRight } from "lucide-react";
 
 const contactLinks = [
   {
@@ -27,39 +27,39 @@ export default function About() {
   const paragraphs = t("about.paragraphs", { returnObjects: true });
 
   return (
-    <section id="about" className="h-full">
-      <h2 className="flex items-center pb-4 mb-6 text-3xl font-bold border-b-2 text-lightgray border-midgray">
-        <User className="mr-2" size={28} />
-        {t("about.title").toUpperCase()}
-      </h2>
-      <div className="space-y-6 text-lg leading-relaxed">
-        {paragraphs.map((paragraph, index) => (
-          <p
-            key={index}
-            className="p-6 transition-all duration-300 border rounded-lg shadow-md bg-lightgblue border-midgray hover:shadow-lg"
-          >
-            {paragraph}
+    <>
+      {/* About section */}
+      <section id="about" className="relative mb-20">
+        <div className="max-w-3xl p-6 mx-auto border rounded-lg border-terminal-accent/20 bg-terminal-muted/10 backdrop-blur-xs">
+          <h2 className="flex items-center mb-6 text-2xl font-pixel text-terminal-accent">
+            <ArrowRight className="mr-2" size={16} />
+            {t("about.title").toUpperCase()}
+          </h2>
+          <p className="relative text-lg leading-relaxed font-terminal">
+            <span className="mr-2 text-terminal-accent">$</span>
+            {paragraphs.join(" ")}
+            <span className="animate-pulse text-terminal-accent">_</span>
           </p>
-        ))}
-      </div>
-      <div id="contact" className="flex justify-center gap-8 p-8 my-12 transition-all duration-300 rounded-xl bg-darkblue/50 backdrop-blur-sm">
-        {contactLinks.map(({ id, Icon, href, username }) => (
-          <a
-            key={id}
-            href={href}
-            target="_blank"
-            rel="noreferrer"
-            className="flex items-center gap-3 p-4 transition-all duration-300 rounded-lg shadow-lg bg-midgray/50 hover:bg-primary-500 hover:-translate-y-2 group"
-            title={id}
-          >
-            <Icon
-              size={28}
-              className="text-gray-300 transition-colors duration-300 group-hover:text-white"
-            />
-            <span className="text-sm text-white">{username}</span>
-          </a>
-        ))}
-      </div>
-    </section>
+        </div>
+      </section>
+
+      {/* Contact section */}
+      <section id="contact" className="flex justify-center p-6">
+        <div className="flex flex-wrap justify-center gap-6">
+          {contactLinks.map(({ id, Icon, href, username }) => (
+            <a
+              key={id}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 p-4 transition-colors duration-200 transform border rounded-lg border-terminal-accent/20 bg-terminal-muted/10 backdrop-blur-xs text-terminal-text hover:text-terminal-accent hover:scale-110"
+            >
+              <Icon size={24} />
+              <span>{username}</span>
+            </a>
+          ))}
+        </div>
+      </section>
+    </>
   );
 }

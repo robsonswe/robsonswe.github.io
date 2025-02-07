@@ -5,6 +5,12 @@
             "Soy Robson, un desarrollador enfocado en crear aplicaciones intuitivas y eficientes. Me impulsa la resolución de problemas, el código limpio y la entrega de experiencias excepcionales para los usuarios. Siempre dispuesto a adaptarme y crecer, aporto valor y fiabilidad a cada proyecto. Si buscas un desarrollador dedicado, contáctame."
         ]
     },
+    "hero": {
+        "titles": [
+            "Ingeniero de Software",
+            "Solucionador de Problemas"
+        ]
+    },
     "contact": {
         "title": "Contacto"
     },

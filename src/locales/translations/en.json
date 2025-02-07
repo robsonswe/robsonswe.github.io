@@ -5,6 +5,12 @@
       "I'm Robson, a developer focused on building intuitive and efficient applications. I’m driven by problem-solving, clean code, and delivering exceptional user experiences. Always eager to adapt and grow, I bring value and reliability to every project. If you’re looking for a dedicated developer, contact me."
     ]
   },
+  "hero": {
+    "titles": [
+      "Software Engineer",
+      "Problem Solver"
+    ]
+  },
   "contact": {
     "title": "Contact"
   },

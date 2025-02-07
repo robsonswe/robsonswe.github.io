@@ -1,5 +1,3 @@
-"use client"
-
 import { useState, useEffect } from "react"
 import { useTranslation } from "react-i18next"
 
@@ -18,7 +16,7 @@ export default function Navbar() {
   const handleScrollToSection = (id) => {
     const section = document.getElementById(id)
     if (section) {
-      const offset = 80 // Adjust this based on your navbar height
+      const offset = 80
       const top = section.getBoundingClientRect().top + window.scrollY - offset
 
       window.scrollTo({ top, behavior: "smooth" })
@@ -26,23 +24,45 @@ export default function Navbar() {
   }
 
   return (
-    <nav
-      className={`sticky top-0 z-10 transition-all duration-300 ${isScrolled ? "bg-gblue shadow-lg" : "bg-transparent"}`}
-    >
+    <nav className="sticky top-0 z-40 border-b bg-terminal-muted/80 backdrop-blur-xs border-terminal-accent/20">
       <div className="container px-4 mx-auto">
-        <div className="flex flex-wrap items-center justify-center w-full h-16">
-          <ul className="flex flex-wrap justify-center w-full gap-3 sm:gap-6">
-            {navItems.map((item) => (
-              <li key={item} className="text-sm uppercase md:text-lg">
-                <button
-                  onClick={() => handleScrollToSection(item)}
-                  className="px-3 py-2 transition-all duration-300 rounded-lg text-lightgray hover:bg-lightgblue hover:text-white"
-                >
-                  {t(`navbar.${item}`)}
-                </button>
-              </li>
-            ))}
-          </ul>
+        <div className="flex items-center justify-between h-12">
+          <div className="flex items-center gap-4">
+            <span className="w-3 h-3 bg-red-500 rounded-full" />
+            <span className="w-3 h-3 bg-yellow-500 rounded-full" />
+            <span className="w-3 h-3 bg-green-500 rounded-full" />
+          </div>
+          <div className="flex items-center gap-6 font-terminal">
+            <a 
+              href="#about" 
+              className="transition-colors text-terminal-text hover:text-terminal-accent" 
+              onClick={() => handleScrollToSection('about')}
+            >
+              {t('navbar.about')}
+            </a>
+            <a 
+              href="#skills" 
+              className="transition-colors text-terminal-text hover:text-terminal-accent" 
+              onClick={() => handleScrollToSection('skills')}
+            >
+              {t('navbar.skills')}
+            </a>
+            <a 
+              href="#projects" 
+              className="transition-colors text-terminal-text hover:text-terminal-accent" 
+              onClick={() => handleScrollToSection('projects')}
+            >
+              {t('navbar.projects')}
+            </a>
+            <a 
+              href="#contact" 
+              className="transition-colors text-terminal-text hover:text-terminal-accent" 
+              onClick={() => handleScrollToSection('contact')}
+            >
+              {t('navbar.contact')}
+            </a>
+          </div>
+          <div className="w-24" />
         </div>
       </div>
     </nav>
