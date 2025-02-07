@@ -35,28 +35,28 @@ export default function Navbar() {
           <div className="flex items-center gap-6 font-terminal">
             <a 
               href="#about" 
-              className="transition-colors text-terminal-text hover:text-terminal-accent" 
+              className="text-xl transition-colors text-terminal-text hover:text-terminal-accent" 
               onClick={() => handleScrollToSection('about')}
             >
               {t('navbar.about')}
             </a>
             <a 
               href="#skills" 
-              className="transition-colors text-terminal-text hover:text-terminal-accent" 
+              className="text-xl transition-colors text-terminal-text hover:text-terminal-accent" 
               onClick={() => handleScrollToSection('skills')}
             >
               {t('navbar.skills')}
             </a>
             <a 
               href="#projects" 
-              className="transition-colors text-terminal-text hover:text-terminal-accent" 
+              className="text-xl transition-colors text-terminal-text hover:text-terminal-accent" 
               onClick={() => handleScrollToSection('projects')}
             >
               {t('navbar.projects')}
             </a>
             <a 
               href="#contact" 
-              className="transition-colors text-terminal-text hover:text-terminal-accent" 
+              className="text-xl transition-colors text-terminal-text hover:text-terminal-accent" 
               onClick={() => handleScrollToSection('contact')}
             >
               {t('navbar.contact')}

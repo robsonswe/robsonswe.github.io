@@ -29,15 +29,15 @@ export default function Skills() {
               key={category}
               className="p-6 transition-all duration-300 transform border rounded-lg bg-terminal-muted/20 border-terminal-accent/20 backdrop-blur-xs hover:border-terminal-accent hover:bg-terminal-muted/30"
             >
-              <h3 className="mb-4 text-xl font-terminal text-terminal-highlight">
+              <h3 className="mb-4 text-3xl font-terminal text-terminal-highlight">
                 {">"} {t(`skills.${category}s`)}
               </h3>
               <ul className="grid grid-cols-1 gap-2 sm:grid-cols-3 font-terminal">
                 {skillsData
                   .filter((skill) => skill.category === category)
                   .map((skill) => (
-                    <li key={skill.name} className="flex items-center">
-                      <span className="mr-2 text-terminal-accent">$</span>
+                    <li key={skill.name} className="flex items-center text-xl">
+                      <span className="mr-2 text-base text-terminal-accent">$</span>
                       {skill.name}
                     </li>
                   ))}

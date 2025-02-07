@@ -52,7 +52,7 @@ export default function About() {
               href={href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 p-4 transition-colors duration-200 transform border rounded-lg border-terminal-accent/20 bg-terminal-muted/10 backdrop-blur-xs text-terminal-text hover:text-terminal-accent hover:scale-110"
+              className="flex items-center gap-3 p-4 text-lg transition-colors duration-200 transform border rounded-lg font-terminal border-terminal-accent/20 bg-terminal-muted/10 backdrop-blur-xs text-terminal-text hover:text-terminal-accent hover:scale-110"
             >
               <Icon size={24} />
               <span>{username}</span>
