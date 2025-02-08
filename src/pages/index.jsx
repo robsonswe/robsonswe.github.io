@@ -66,8 +66,8 @@ export default function Home() {
         <Projects />
       </main>
 
-      <footer className="py-6 text-center border-t border-midgray">
-        <p className="text-sm">
+      <footer className="py-6 text-center border-t border-midgray font-terminal">
+        <p className="text-base">
           © {new Date().getFullYear()} Robson Santana. All rights reserved.
         </p>
       </footer>
