@@ -45,7 +45,7 @@ export default function Home() {
 
   return (
     <div className="relative min-h-screen bg-terminal-bg text-terminal-text"> {/* Removed overflow-hidden */}
-       <MetaData pageTitle="Robson Santana | Software Engineer" />
+      <MetaData pageTitle="Robson Santana | Software Engineer" />
       {/* CRT Overlay - Enhanced with more pronounced effect */}
       <div className="pointer-events-none fixed inset-0 bg-terminal-bg bg-[linear-gradient(rgba(18,16,16,0_50%)_50%,rgba(0,0,0,0.35)_50%)] bg-[length:100%_4px] z-50 opacity-20" />
 
@@ -75,10 +75,13 @@ export default function Home() {
       {showBackToTop && (
         <button
           onClick={scrollToTop}
-          className="fixed p-2 transition-all duration-300 rounded-full shadow-lg bottom-4 right-4 bg-lightgblue hover:bg-midgray"
+          className="fixed p-2 transition-all duration-300 rounded-lg shadow-lg bottom-4 right-4 bg-terminal-muted/80 backdrop-blur-xs border border-terminal-accent/20 hover:border-terminal-accent/50 hover:scale-110 group"
           aria-label="Back to top"
         >
-          <ArrowUp size={24} className="text-gblue" />
+          <div className="relative">
+            <ArrowUp size={24} className="text-terminal-accent group-hover:text-terminal-highlight" />
+            <div className="absolute inset-0 bg-terminal-accent/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+          </div>
         </button>
       )}
     </div>

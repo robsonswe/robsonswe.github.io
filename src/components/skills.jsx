@@ -36,9 +36,17 @@ export default function Skills() {
                 {skillsData
                   .filter((skill) => skill.category === category)
                   .map((skill) => (
-                    <li key={skill.name} className="flex items-center text-xl">
-                      <span className="mr-2 text-base text-terminal-accent">$</span>
+                    <li
+                      key={skill.name}
+                      className="flex items-center text-xl hover:bg-terminal-muted/30 px-2 py-1 rounded transition-colors"
+                    >
+                      <span className="mr-2 text-base text-terminal-accent">▹</span>
                       {skill.name}
+                      {skill.level && (
+                        <span className="ml-2 text-sm text-terminal-accent/80">
+                          ({skill.level})
+                        </span>
+                      )}
                     </li>
                   ))}
               </ul>
