@@ -25,10 +25,13 @@
     "projects": {
         "title": "Projetos",
         "frontend": "Projetos Frontend",
+        "repositories": "Repositórios",
         "all": "Todos os Projetos",
         "details": "Detalhes",
         "live": "Versão Online",
-        "source": "Código Fonte"
+        "source": "Código Fonte",
+        "prev": "Anterior",
+        "next": "Seguinte"
     },
     "skills": {
         "title": "Competências Técnicas",

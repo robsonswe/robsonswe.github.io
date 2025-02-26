@@ -25,10 +25,13 @@
   "projects": {
     "title": "Projects",
     "frontend": "Frontend Projects",
+    "repositories": "Repositories",
     "all": "All Projects",
     "details": "Details",
     "live": "Live Version",
-    "source": "Source Code"
+    "source": "Source Code",
+    "prev": "Prev",
+    "next": "Next"
   },
   "skills": {
     "title": "Tech Skills",

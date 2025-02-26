@@ -66,9 +66,6 @@ export default function Navbar() {
             <span className="w-3 h-3 bg-red-500 rounded-full" />
             <span className="w-3 h-3 bg-yellow-500 rounded-full" />
             <span className="w-3 h-3 bg-green-500 rounded-full" />
-            <div className="px-2 py-1 ml-4 text-xs border rounded font-terminal text-terminal-accent/70 border-terminal-accent/20">
-              portfolio.sh
-            </div>
           </div>
 
           {/* Desktop Navigation */}

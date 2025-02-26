@@ -75,10 +75,6 @@ export default function About() {
                 </p>
               ))}
 
-              <div className="flex items-center mt-6">
-                <span className="mr-2 text-terminal-accent">robson@portfolio:~$</span>
-                <span className="animate-pulse text-terminal-accent">_</span>
-              </div>
             </div>
           </div>
         </div>

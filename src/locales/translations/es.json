@@ -20,7 +20,7 @@
         "skills": "Habilidades",
         "projects": "Proyectos",
         "contact": "Contacto",
-    "resume": "Currículum"
+        "resume": "Currículum"
     },
     "projects": {
         "title": "Proyectos",
@@ -28,7 +28,9 @@
         "all": "Todos los proyectos",
         "details": "Detalles",
         "live": "Versión en vivo",
-        "source": "Código fuente"
+        "source": "Código fuente",
+        "prev": "Anterior",
+        "next": "Siguiente"
     },
     "skills": {
         "title": "Habilidades Técnicas",

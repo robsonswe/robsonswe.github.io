@@ -25,11 +25,14 @@
   "projects": {
     "title": "Projetos",
     "frontend": "Projetos Frontend",
+    "repositories": "Repositórios",
     "all": "Todos Projetos",
     "details": "Detalhes",
     "live": "Prévia",
-    "source": "Código Fonte"
-  },
+    "source": "Código Fonte",
+    "prev": "Anterior",
+    "next": "Próximo"
+},
   "skills": {
     "title": "Conhecimentos Técnicos",
     "languages": "Linguagens",
