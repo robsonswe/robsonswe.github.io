@@ -79,23 +79,6 @@ export default function Projects() {
                 {getProjectDescription(project)}
               </p>
 
-              {/* Tech tags */}
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.techs.slice(0, 4).map((tech, index) => (
-                  <span
-                    key={index}
-                    className="px-2 py-1 text-xs transition-all duration-300 border rounded-md font-terminal bg-terminal-accent/10 border-terminal-accent/20 group-hover:bg-terminal-accent/20"
-                  >
-                    {tech}
-                  </span>
-                ))}
-                {project.techs.length > 4 && (
-                  <span className="px-2 py-1 text-xs border rounded-md font-terminal bg-terminal-accent/10 border-terminal-accent/20">
-                    +{project.techs.length - 4}
-                  </span>
-                )}
-              </div>
-
               {/* Project links */}
               <div className="flex gap-4 mt-6">
                 <ProjectDetailsModal
