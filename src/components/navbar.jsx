@@ -7,15 +7,20 @@ export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [currentSection, setCurrentSection] = useState("home");
+  const currentLang = i18n.language;
+
+  const resumeFile = currentLang === 'es' ? 'curriculum.pdf'
+    : currentLang.startsWith('pt') ? 'curriculo.pdf'
+      : 'resume.pdf';
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 20);
-      
+
       // Update active section based on scroll position
       const sections = ["about", "skills", "projects", "contact"];
       const currentPosition = window.scrollY + 100;
-      
+
       for (const section of sections) {
         const element = document.getElementById(section);
         if (element) {
@@ -27,7 +32,7 @@ export default function Navbar() {
         }
       }
     };
-    
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -50,11 +55,10 @@ export default function Navbar() {
   };
 
   return (
-    <nav className={`sticky top-0 z-40 transition-all duration-300 border-b backdrop-blur-md ${
-      isScrolled 
-        ? "bg-terminal-bg/90 border-terminal-accent/30 shadow-[0_4px_10px_rgba(0,255,196,0.1)]" 
+    <nav className={`sticky top-0 z-40 transition-all duration-300 border-b backdrop-blur-md ${isScrolled
+        ? "bg-terminal-bg/90 border-terminal-accent/30 shadow-[0_4px_10px_rgba(0,255,196,0.1)]"
         : "bg-terminal-bg/70 border-terminal-accent/10"
-    }`}>
+      }`}>
       <div className="container px-4 mx-auto">
         <div className="flex items-center justify-between h-16">
           {/* Window Controls */}
@@ -66,18 +70,17 @@ export default function Navbar() {
               portfolio.sh
             </div>
           </div>
-          
+
           {/* Desktop Navigation */}
           <div className="items-center hidden gap-8 md:flex font-terminal">
             {navItems.map((item) => (
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className={`text-lg transition-all flex items-center gap-2 px-3 py-1 rounded ${
-                  currentSection === item.id
+                className={`text-lg transition-all flex items-center gap-2 px-3 py-1 rounded ${currentSection === item.id
                     ? "text-terminal-accent bg-terminal-accent/10 border border-terminal-accent/30"
                     : "text-terminal-text hover:text-terminal-accent"
-                }`}
+                  }`}
                 onClick={(e) => {
                   e.preventDefault();
                   handleScrollToSection(item.id);
@@ -88,21 +91,20 @@ export default function Navbar() {
               </a>
             ))}
           </div>
-          
+
           {/* Language Toggle and Resume Download */}
           <div className="flex items-center gap-4">
 
-            
             <a
-              href="/resume.pdf" 
-              target="_blank" 
+              href={`/${resumeFile}`}
+              target="_blank"
               rel="noopener noreferrer"
               className="items-center hidden gap-2 px-3 py-1 text-sm transition-colors border rounded md:flex font-terminal border-terminal-accent/30 bg-terminal-accent/10 hover:bg-terminal-accent/20 text-terminal-accent"
             >
               <Download size={16} />
               {t("navbar.resume")}
             </a>
-            
+
             {/* Mobile Menu Button */}
             <button
               className="p-2 md:hidden text-terminal-accent"
@@ -113,7 +115,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      
+
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
         <div className="absolute w-full py-4 border-b shadow-lg md:hidden bg-terminal-bg border-terminal-accent/20">
@@ -122,11 +124,10 @@ export default function Navbar() {
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                className={`text-lg flex items-center gap-2 py-2 px-4 rounded font-terminal ${
-                  currentSection === item.id
+                className={`text-lg flex items-center gap-2 py-2 px-4 rounded font-terminal ${currentSection === item.id
                     ? "text-terminal-accent bg-terminal-accent/10 border border-terminal-accent/30"
                     : "text-terminal-text hover:text-terminal-accent"
-                }`}
+                  }`}
                 onClick={(e) => {
                   e.preventDefault();
                   handleScrollToSection(item.id);
@@ -136,10 +137,10 @@ export default function Navbar() {
                 {t(`navbar.${item.id}`)}
               </a>
             ))}
-            
+
             <a
-              href="/resume.pdf" 
-              target="_blank" 
+              href={`/${resumeFile}`}
+              target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 mt-2 text-sm transition-colors border rounded font-terminal border-terminal-accent/30 bg-terminal-accent/10 hover:bg-terminal-accent/20 text-terminal-accent"
             >
