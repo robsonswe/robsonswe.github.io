@@ -25,6 +25,7 @@
     "projects": {
         "title": "Proyectos",
         "frontend": "Proyectos Frontend",
+        "repositories": "Repositorios",
         "all": "Todos los proyectos",
         "details": "Detalles",
         "live": "Versión en vivo",
