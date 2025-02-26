@@ -147,94 +147,72 @@ export default function Projects() {
       )}
 
       {/* Projects container - Grid for desktop, single item for mobile */}
-      <div 
+      <div
         ref={projectsContainerRef}
-        className={`${isMobile ? 'overflow-hidden' : 'grid grid-cols-1 md:grid-cols-2 gap-6'}`}
+        className={`${isMobile ? "overflow-hidden" : "grid grid-cols-1 md:grid-cols-2 gap-6"}`}
       >
         {sortedProjects.map((project, index) => (
           <div
             key={project.id}
             className={`
-              overflow-hidden border rounded-lg bg-terminal-muted/10 border-terminal-accent/20 backdrop-blur-xs 
+              border rounded-lg bg-terminal-muted/10 border-terminal-accent/20 backdrop-blur-xs 
               transition-all duration-300 hover:border-terminal-accent/50 hover:shadow-[0_0_20px_rgba(var(--terminal-accent-rgb),0.15)]
-              hover:translate-y-[-2px] group
-              ${isMobile ? 'mb-0' : 'mb-6'}
-              ${isMobile && index !== currentPage ? 'hidden' : 'block'}
+              hover:translate-y-[-2px] group p-6
+              ${isMobile ? "mb-0" : "mb-6"}
+              ${isMobile && index !== currentPage ? "hidden" : "block"}
             `}
           >
-            {/* Project header with terminal style */}
-            <div className="flex items-center justify-between px-4 py-2 border-b bg-terminal-muted/30 border-terminal-accent/30">
-              <div className="flex items-center space-x-2">
-                <div className="flex space-x-1.5">
-                  <span className="inline-block w-2.5 h-2.5 rounded-full bg-red-500/70"></span>
-                  <span className="inline-block w-2.5 h-2.5 rounded-full bg-yellow-500/70"></span>
-                  <span className="inline-block w-2.5 h-2.5 rounded-full bg-green-500/70"></span>
-                </div>
-                <Code size={14} className="ml-2 text-terminal-accent" />
-                <span className="text-xs font-terminal text-terminal-accent/80">{getProjectName(project).toLowerCase().replace(/\s+/g, '_')}</span>
-              </div>
-              {isMobile && (
-                <span className="px-2 py-0.5 text-xs font-mono rounded-full bg-terminal-accent/20 text-terminal-accent">
-                  {index + 1}/{sortedProjects.length}
-                </span>
-              )}
-            </div>
-
             {/* Project content */}
-            <div className="p-6">
-              <h3 className="mb-3 text-xl transition-colors font-terminal text-terminal-highlight group-hover:text-terminal-accent">
-                <span className="mr-2 text-terminal-accent">{">"}</span>
-                {getProjectName(project)}
-              </h3>
-              
-              <p className="mb-4 font-terminal text-terminal-text">
-                {getProjectDescription(project)}
-              </p>
+            <h3 className="mb-3 text-xl transition-colors font-terminal text-terminal-highlight group-hover:text-terminal-accent">
+              <span className="mr-2 text-terminal-accent">{">"}</span>
+              {getProjectName(project)}
+            </h3>
 
+            <p className="mb-4 font-terminal text-terminal-text">{getProjectDescription(project)}</p>
 
-              {/* Project links */}
-              <div className="flex flex-wrap gap-4 mt-6">
-                <ProjectDetailsModal
-                  project={{
-                    title: getProjectName(project),
-                    description: getProjectDescription(project),
-                    longDescription: getProjectLongDescription(project),
-                    techs: project.techs,
-                    live: project.preview,
-                    source: project.github,
-                    image: project.screenshot,
-                  }}
-                  detailsText={`${t("projects.details")}`}
-                  liveText={t("projects.live")}
-                  sourceText={t("projects.source")}
-                />
-                {project.preview && (
-                  <Link
-                    href={project.preview}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-row items-center gap-2 transition-colors font-terminal text-terminal-accent hover:text-terminal-highlight"
-                  >
-                    <ExternalLink size={16} />
-                    {t("projects.live")}
-                  </Link>
-                )}
-                {project.github && (
-                  <Link
-                    href={project.github}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex flex-row items-center gap-2 transition-colors font-terminal text-terminal-accent hover:text-terminal-highlight"
-                  >
-                    <Code size={16} />
-                    {t("projects.source")}
-                  </Link>
-                )}
-              </div>
+            {/* Project links */}
+            <div className="flex flex-wrap gap-4 mt-6">
+              <ProjectDetailsModal
+                project={{
+                  title: getProjectName(project),
+                  description: getProjectDescription(project),
+                  longDescription: getProjectLongDescription(project),
+                  techs: project.techs,
+                  live: project.preview,
+                  source: project.github,
+                  image: project.screenshot,
+                }}
+                detailsText={`${t("projects.details")}`}
+                liveText={t("projects.live")}
+                sourceText={t("projects.source")}
+              />
+              {project.preview && (
+                <Link
+                  href={project.preview}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-row items-center gap-2 transition-colors font-terminal text-terminal-accent hover:text-terminal-highlight"
+                >
+                  <ExternalLink size={16} />
+                  {t("projects.live")}
+                </Link>
+              )}
+              {project.github && (
+                <Link
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex flex-row items-center gap-2 transition-colors font-terminal text-terminal-accent hover:text-terminal-highlight"
+                >
+                  <Code size={16} />
+                  {t("projects.source")}
+                </Link>
+              )}
             </div>
           </div>
         ))}
       </div>
+
 
       {/* Mobile pagination indicator */}
       {isMobile && totalPages > 1 && (
