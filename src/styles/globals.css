@@ -4,19 +4,23 @@
 
 @theme {
   /* ========== Terminal Theme Colors ========== */
-  --color-terminal-bg: #1a1f2c;
-  --color-terminal-text: #d6bcfa;
-  --color-terminal-accent: #9b87f5;
-  --color-terminal-muted: #403e43;
-  --color-terminal-highlight: #ffffff;
-  --color-terminal-secondary: #8a898c;
+  --color-terminal-bg: #1B1B2F;
+  --color-terminal-text: #ffffff;  /* Pure white text for maximum contrast */
+  --color-terminal-accent: #E7E853;  /* Watt as primary accent */
+  --color-terminal-muted: #4a5a8c;  /* Much lighter shade of Blue Zodiac */
+  --color-terminal-highlight: #ffffff;  /* Kept white for maximum contrast */
+  --color-terminal-secondary: #d8e1f2;  /* Very light blue secondary text */
 
   /* ========== General Color Scheme ========== */
   --color-gblue: #1B1B2F;
   --color-lightgblue: #2D2C40;
   --color-midgray: #3F3F5A;
   --color-lightgray: #C0C1C8;
+  --color-neon-purple: #E7E853;  /* Watt yellow (keeping variable name) */
+  --color-neon-blue: #47b8ff;  /* Brighter complementary blue */
+  
 
+  /* Rest of the theme remains the same */
   /* ========== Semantic Colors ========== */
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
@@ -47,15 +51,19 @@
   /* ========== Font Families ========== */
   --font-pixel: 'Press Start 2P', monospace;
   --font-terminal: 'VT323', monospace;
+  --font-cyber: 'Orbitron', sans-serif;
 
   /* ========== Animations ========== */
   --animate-scanline: scanline 8s linear infinite;
   --animate-glitch: glitch 0.3s ease-in-out infinite;
   --animate-flicker: flicker 0.15s ease-in-out infinite;
+  --animate-pulse: pulse 2s ease-in-out infinite;
+  --animate-float: float 6s ease-in-out infinite;
 
   @keyframes scanline {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(100%); }
+    0% { transform: translateY(0); opacity: 0.15; }
+    50% { opacity: 0.35; }
+    100% { transform: translateY(100%); opacity: 0.15; }
   }
 
   @keyframes glitch {
@@ -67,6 +75,16 @@
   @keyframes flicker {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.8; }
+  }
+
+  @keyframes pulse {
+    0%, 100% { box-shadow: 0 0 15px var(--color-terminal-glow); }
+    50% { box-shadow: 0 0 30px var(--color-terminal-glow); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
   }
 }
 
@@ -80,19 +98,34 @@
   body {
     @apply antialiased bg-terminal-bg text-terminal-text;
     text-rendering: optimizeLegibility;
+    background-image: 
+      radial-gradient(circle at 10% 20%, rgba(231, 232, 83, 0.08) 0%, transparent 50%),
+      radial-gradient(circle at 90% 80%, rgba(71, 184, 255, 0.12) 0%, transparent 50%);
+  }
+  
+  /* Add complementary accent color */
+  .neon-blue-accent {
+    color: var(--color-neon-blue);
+    text-shadow: 0 0 5px rgba(71, 184, 255, 0.7);
+  }
+  
+  /* Enhanced font classes */
+  .font-cyber {
+    font-family: var(--font-cyber);
+    letter-spacing: 0.05em;
   }
 }
 
 ::selection {
-  @apply bg-terminal-accent/30 text-terminal-highlight;
+  @apply bg-terminal-accent/40 text-terminal-highlight;
 }
 
 /* Enhanced glitch effect */
 @keyframes textShadowGlitch {
-  0%, 14% { text-shadow: 0.05em 0 0 rgba(255,0,0,0.75), -0.025em -0.05em 0 rgba(0,255,0,0.75), 0.025em 0.05em 0 rgba(0,0,255,0.75); }
-  15%, 49% { text-shadow: -0.05em -0.025em 0 rgba(255,0,0,0.75), 0.025em 0.025em 0 rgba(0,255,0,0.75), -0.05em -0.05em 0 rgba(0,0,255,0.75); }
-  50%, 99% { text-shadow: 0.025em 0.05em 0 rgba(255,0,0,0.75), 0.05em 0 0 rgba(0,255,0,0.75), 0 -0.05em 0 rgba(0,0,255,0.75); }
-  100% { text-shadow: -0.025em 0 0 rgba(255,0,0,0.75), -0.025em -0.025em 0 rgba(0,255,0,0.75), -0.025em -0.05em 0 rgba(0,0,255,0.75); }
+  0%, 14% { text-shadow: 0.05em 0 0 rgba(231, 232, 83, 0.8), -0.025em -0.05em 0 rgba(71, 184, 255, 0.8), 0.025em 0.05em 0 rgba(71, 184, 255, 0.8); }
+  15%, 49% { text-shadow: -0.05em -0.025em 0 rgba(231, 232, 83, 0.8), 0.025em 0.025em 0 rgba(71, 184, 255, 0.8), -0.05em -0.05em 0 rgba(71, 184, 255, 0.8); }
+  50%, 99% { text-shadow: 0.025em 0.05em 0 rgba(231, 232, 83, 0.8), 0.05em 0 0 rgba(71, 184, 255, 0.8), 0 -0.05em 0 rgba(71, 184, 255, 0.8); }
+  100% { text-shadow: -0.025em 0 0 rgba(231, 232, 83, 0.8), -0.025em -0.025em 0 rgba(71, 184, 255, 0.8), -0.025em -0.05em 0 rgba(71, 184, 255, 0.8); }
 }
 
 /* Smooth collapse animation */
@@ -107,6 +140,31 @@
 }
 
 .animate-glitch { animation: textShadowGlitch 1s infinite; }
+
+/* Add neon glow effect utility classes */
+.text-glow-accent {
+  text-shadow: 0 0 8px var(--color-terminal-glow);
+}
+
+.text-glow-blue {
+  text-shadow: 0 0 8px rgba(71, 184, 255, 0.7);
+}
+
+.border-glow-accent {
+  box-shadow: 0 0 8px var(--color-terminal-glow);
+}
+
+.border-glow-blue {
+  box-shadow: 0 0 8px rgba(71, 184, 255, 0.7);
+}
+
+/* Add gradient text effect */
+.gradient-text {
+  background: linear-gradient(135deg, var(--color-terminal-accent) 0%, var(--color-neon-blue) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
 [data-state="open"] > .collapsible-content {
   animation: collapseDown 300ms ease-out;

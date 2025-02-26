@@ -61,7 +61,7 @@ export default function Skills() {
               <button
                 key={cat}
                 onClick={() => setActiveCategory(cat)}
-                className={`px-4 py-2 text-sm font-terminal rounded-lg transition-all duration-200 
+                className={`px-4 py-2 text-lg font-terminal rounded-lg transition-all duration-200 
                   ${activeCategory === cat 
                     ? 'bg-terminal-accent/30 text-terminal-highlight border-terminal-accent border' 
                     : 'bg-terminal-muted/20 hover:bg-terminal-muted/40 border border-terminal-accent/20'}`}

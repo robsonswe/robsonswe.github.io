@@ -163,12 +163,12 @@ export default function Projects() {
             `}
           >
             {/* Project content */}
-            <h3 className="mb-3 text-xl transition-colors font-terminal text-terminal-highlight group-hover:text-terminal-accent">
+            <h3 className="mb-4 text-2xl transition-colors font-terminal text-terminal-highlight group-hover:text-terminal-accent">
               <span className="mr-2 text-terminal-accent">{">"}</span>
-              {getProjectName(project)}
+              <span>{getProjectName(project)}</span>
             </h3>
 
-            <p className="mb-4 font-terminal text-terminal-text">{getProjectDescription(project)}</p>
+            <p className="mb-4 text-lg text-justify font-terminal text-terminal-text">{getProjectDescription(project)}</p>
 
             {/* Project links */}
             <div className="flex flex-wrap gap-4 mt-6">
