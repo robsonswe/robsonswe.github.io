@@ -1,6 +1,7 @@
 {
   "about": {
     "title": "About",
+    "subtitle": "about_me",
     "paragraphs": [
       "I'm Robson, a developer focused on building intuitive and efficient applications. I’m driven by problem-solving, clean code, and delivering exceptional user experiences. Always eager to adapt and grow, I bring value and reliability to every project. If you’re looking for a dedicated developer, contact me."
     ]
@@ -18,7 +19,8 @@
     "about": "About",
     "skills": "Skills",
     "projects": "Projects",
-    "contact": "Contact"
+    "contact": "Contact",
+    "resume": "Resume"
   },
   "projects": {
     "title": "Projects",

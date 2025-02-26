@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { useSkills } from "../hooks/useSkills";
-import { ArrowRight } from "lucide-react";
+import { Terminal } from "lucide-react";
 
 export default function Skills() {
   const { t } = useTranslation();
@@ -14,10 +14,14 @@ export default function Skills() {
 
   return (
     <section id="skills" className="mb-20">
-      <h2 className="flex items-center mb-6 text-2xl font-pixel text-terminal-accent">
-        <ArrowRight className="mr-2" size={16} />
-        {t("skills.title").toUpperCase()}
-      </h2>
+      <div className="flex items-center mb-8 group">
+        <div className="p-2 mr-4 border rounded-lg bg-terminal-accent/10 border-terminal-accent/30 transition-all duration-300 group-hover:shadow-[0_0_15px_rgba(var(--terminal-accent-rgb),0.3)]">
+          <Terminal size={24} className="text-terminal-accent" />
+        </div>
+        <h2 className="text-2xl transition-all duration-300 font-pixel text-terminal-accent group-hover:text-terminal-highlight">
+          {t("skills.title").toUpperCase()}
+        </h2>
+      </div>
       {loading ? (
         <div className="text-xl font-terminal text-terminal-accent">
           Loading skills...
@@ -38,7 +42,7 @@ export default function Skills() {
                   .map((skill) => (
                     <li
                       key={skill.name}
-                      className="flex items-center text-xl hover:bg-terminal-muted/30 px-2 py-1 rounded transition-colors"
+                      className="flex items-center px-2 py-1 text-xl transition-colors rounded hover:bg-terminal-muted/30"
                     >
                       <span className="mr-2 text-base text-terminal-accent">▹</span>
                       {skill.name}

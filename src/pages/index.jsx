@@ -75,12 +75,12 @@ export default function Home() {
       {showBackToTop && (
         <button
           onClick={scrollToTop}
-          className="fixed p-2 transition-all duration-300 rounded-lg shadow-lg bottom-4 right-4 bg-terminal-muted/80 backdrop-blur-xs border border-terminal-accent/20 hover:border-terminal-accent/50 hover:scale-110 group"
+          className="fixed p-2 transition-all duration-300 border rounded-lg shadow-lg bottom-4 right-4 bg-terminal-muted/80 backdrop-blur-xs border-terminal-accent/20 hover:border-terminal-accent/50 hover:scale-110 group"
           aria-label="Back to top"
         >
           <div className="relative">
             <ArrowUp size={24} className="text-terminal-accent group-hover:text-terminal-highlight" />
-            <div className="absolute inset-0 bg-terminal-accent/10 rounded-full opacity-0 group-hover:opacity-100 transition-opacity" />
+            <div className="absolute inset-0 transition-opacity rounded-full opacity-0 bg-terminal-accent/10 group-hover:opacity-100" />
           </div>
         </button>
       )}

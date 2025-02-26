@@ -52,7 +52,7 @@ const ProjectDetailsModal = ({ project, detailsText, liveText, sourceText }) => 
                     <p className="mb-4 text-lg font-terminal">
                         {project.longDescription || project.description}
                     </p>
-                    <div className='flex flex-col gap-4'>
+                    <div className="p-4 mb-6 border rounded-lg border-terminal-accent/20 bg-terminal-muted/10 backdrop-blur-xs">
                         <p className='py-1 text-sm font-bold rounded-sm font-pixel'>Tech Stack</p>
                         <div className="flex flex-wrap gap-2 mb-4">
                             {project.techs.map((tech, index) => (
