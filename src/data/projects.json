@@ -19,17 +19,17 @@
     {
         "id": 2,
         "name": {
-            "default": "CS:Brasil"
+            "default": "MyShop"
         },
         "description": {
-            "default": "CS:Brasil is a platform that provides essential statistics about eSports players and teams. The website is built using HTML, TailwindCSS, Typescript, React, and NextJS. Python scripts are used to gather and provide the information for the project.",
-            "pt": "CS:Brasil é uma plataforma que fornece estatísticas essenciais sobre jogadores e equipes de esportes eletrônicos. O site é construído usando HTML, TailwindCSS, Typescript, React e NextJS. Scripts Python são usados para coletar e fornecer as informações para o projeto.",
-            "pt-br": "CS:Brasil é uma plataforma que fornece estatísticas essenciais sobre jogadores e equipes de esportes eletrônicos. O site é construído usando HTML, TailwindCSS, Typescript, React e NextJS. Scripts Python são usados para coletar e fornecer as informações para o projeto."
+            "default": "MyShop is a functional prototype of an online store built with HTML, CSS, JavaScript, and React. It showcases essential features of a retail website, including product listings and responsive UI, focusing on core interactions and layout without backend integration.",
+            "pt": "O MyShop é um protótipo funcional de uma loja online, desenvolvido com HTML, CSS, JavaScript e React. Apresenta funcionalidades essenciais de um site de comércio, como listagem de produtos e uma interface responsiva, focando nas interações principais e no layout, sem integração com backend.",
+            "pt-br": "O MyShop é um protótipo funcional de uma loja online, desenvolvido com HTML, CSS, JavaScript e React. Apresenta funcionalidades essenciais de um site de comércio eletrônico, como listagem de produtos e uma interface responsiva, com foco nas interações principais e no layout, sem integração com backend."
         },
-        "techs": ["HTML", "Tailwind", "Typescript", "NextJS", "Python"],
-        "github": "https://github.com/robsonswe/cs50xfinal",
-        "preview": "https://cs50xfinal.vercel.app/",
-        "screenshot": "https://robsonswe.github.io/frontend-projects/screenshots/esports.jpg",
+        "techs": ["HTML", "CSS", "JavaScript", "React"],
+        "github": "https://github.com/robsonswe/myshop",
+        "preview": "https://robsonswe.github.io/myshop/",
+        "screenshot": "https://raw.githubusercontent.com/robsonswe/myshop/refs/heads/main/screenshot-small.png",
         "featured": false,
         "sorting_order": 2
     },
