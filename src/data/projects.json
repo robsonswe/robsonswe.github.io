@@ -22,11 +22,11 @@
             "default": "MyShop"
         },
         "description": {
-            "default": "MyShop is a functional prototype of an online store built with HTML, CSS, JavaScript, and React. It showcases essential features of a retail website, including product listings and responsive UI, focusing on core interactions and layout without backend integration.",
-            "pt": "O MyShop é um protótipo funcional de uma loja online, desenvolvido com HTML, CSS, JavaScript e React. Apresenta funcionalidades essenciais de um site de comércio, como listagem de produtos e uma interface responsiva, focando nas interações principais e no layout, sem integração com backend.",
-            "pt-br": "O MyShop é um protótipo funcional de uma loja online, desenvolvido com HTML, CSS, JavaScript e React. Apresenta funcionalidades essenciais de um site de comércio eletrônico, como listagem de produtos e uma interface responsiva, com foco nas interações principais e no layout, sem integração com backend."
+            "default": "MyShop is a functional prototype of an online store built with HTML, TailwindCSS, JavaScript, and React. It showcases essential features of a retail website, including product listings and responsive UI, focusing on core interactions and layout without backend integration.",
+            "pt": "O MyShop é um protótipo funcional de uma loja online, desenvolvido com HTML, TailwindCSS, JavaScript e React. Apresenta funcionalidades essenciais de um site de comércio, como listagem de produtos e uma interface responsiva, focando nas interações principais e no layout, sem integração com backend.",
+            "pt-br": "O MyShop é um protótipo funcional de uma loja online, desenvolvido com HTML, TailwindCSS, JavaScript e React. Apresenta funcionalidades essenciais de um site de comércio eletrônico, como listagem de produtos e uma interface responsiva, com foco nas interações principais e no layout, sem integração com backend."
         },
-        "techs": ["HTML", "CSS", "JavaScript", "React"],
+        "techs": ["HTML", "Tailwind", "JavaScript", "React"],
         "github": "https://github.com/robsonswe/myshop",
         "preview": "https://robsonswe.github.io/myshop/",
         "screenshot": "https://raw.githubusercontent.com/robsonswe/myshop/refs/heads/main/screenshot-small.png",
