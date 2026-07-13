@@ -1,24 +1,25 @@
 import '../styles/globals.css'
 
-import { Press_Start_2P, VT323, Orbitron } from 'next/font/google'
-const pressStart2P = Press_Start_2P({   weight: ['400'],  subsets: ['latin'], display: 'swap' });
-const vt323 = VT323({  weight: ['400'],  subsets: ['latin'], display: 'swap' });
-const orbitron = Orbitron({  weight: ['400'],  subsets: ['latin'], display: 'swap' });
+import { Sora, Chivo } from 'next/font/google'
 
+const sora = Sora({
+  weight: ['400', '500', '600', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-heading',
+})
+
+const chivo = Chivo({
+  weight: ['300', '400', '500', '700'],
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-body',
+})
 
 export default function App({ Component, pageProps }) {
   return (
-    <>
-      <style jsx global>
-        {`
-          :root {
-            --press-start-2p-font: ${pressStart2P.style.fontFamily};
-            --vt323-font: ${vt323.style.fontFamily};
-            --orbitron-font: ${orbitron.style.fontFamily};
-          }
-        `}
-      </style>
+    <div className={`${sora.variable} ${chivo.variable}`}>
       <Component {...pageProps} />
-    </>
+    </div>
   )
 }

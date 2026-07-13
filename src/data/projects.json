@@ -2,71 +2,45 @@
     {
         "id": 1,
         "name": {
-            "default": "FinTrack"
+            "default": "Praxis"
         },
         "description": {
-            "default": "FinTrack is a full-stack finance management application designed to help users keep track of their revenues, expenses, and accounts. The website is built using HTML, TailwindCSS, Typescript, and NextJS, while the backend is built using NodeJS, Typescript, and ExpressJS. The project utilizes a PostgreSQL database to store data, and it includes Docker instructions to simplify setup.",
-            "pt": "FinTrack é um aplicativo de gerenciamento financeiro projetado para ajudar os usuários a acompanhar suas receitas, despesas e contas. O site é construído usando HTML, TailwindCSS, Typescript e NextJS, enquanto o backend é construído usando NodeJS, Typescript e ExpressJS. O projeto utiliza um banco de dados PostgreSQL para armazenar dados e inclui instruções Docker para simplificar a configuração.",
-            "pt-br": "FinTrack é um aplicativo de gerenciamento financeiro projetado para ajudar os usuários a acompanhar suas receitas, despesas e contas. O site é construído usando HTML, TailwindCSS, Typescript e NextJS, enquanto o backend é construído usando NodeJS, Typescript e ExpressJS. O projeto utiliza um banco de dados PostgreSQL para armazenar dados e inclui instruções Docker para simplificar a configuração."
+            "default": "Praxis is a web application for job seeker preparation, featuring AI-driven fit analysis against job descriptions, mock interviews with structured feedback, skill gap identification, and resume critique.",
+            "pt": "Praxis é uma aplicação web para preparação de candidatos, com análise de compatibilidade com IA, entrevistas simuladas com feedback estruturado, identificação de lacunas de habilidades e crítica de currículo.",
+            "pt-br": "Praxis é uma aplicação web para preparação de candidatos, com análise de compatibilidade com IA, entrevistas simuladas com feedback estruturado, identificação de lacunas de habilidades e crítica de currículo."
         },
-        "techs": ["HTML", "Tailwind", "Typescript", "NextJS", "NodeJS", "ExpressJS", "Postgres", "Docker"],
-        "github": "https://github.com/robsonswe/financemanager",
-        "preview": "https://github.com/robsonswe/financemanager/tree/main/website/screenshots",
-        "screenshot": "https://robsonswe.github.io/frontend-projects/screenshots/financemanager.jpg",
+        "longDescription": {
+            "default": "Praxis is a full-stack career acceleration platform built with FastAPI and PostgreSQL. It features a structured profile and curriculum builder, AI-driven fit analysis that maps your background against any job description, automated gap identification with prioritized action items, role-specific mock interviews with structured feedback, behavioral SJT assessment, adversarial resume critique, and a persistent AI career mentor. The interface supports English, Portuguese, Spanish, French, and German.",
+            "pt": "Praxis é uma plataforma completa de aceleração de carreira construída com FastAPI e PostgreSQL. Oferece um editor estruturado de perfil e currículo, análise de compatibilidade com base em IA que mapeia seu perfil contra qualquer descrição de vaga, identificação automatizada de lacunas com itens prioritários, entrevistas simuladas específicas para cada cargo com feedback estruturado, avaliação comportamental SJT, crítica adversarial de currículo e um mentor de carreira com IA persistente. A interface oferece suporte a inglês, português, espanhol, francês e alemão.",
+            "pt-br": "Praxis é uma plataforma completa de aceleração de carreira construída com FastAPI e PostgreSQL. Oferece um editor estruturado de perfil e currículo, análise de compatibilidade com IA que mapeia seu perfil contra qualquer descrição de vaga, identificação automatizada de lacunas com itens prioritários, entrevistas simuladas para cada cargo com feedback estruturado, avaliação comportamental SJT, crítica adversarial de currículo e um mentor de carreira com IA persistente. A interface oferece suporte a inglês, português, espanhol, francês e alemão."
+        },
+        "techs": ["Python", "FastAPI", "PostgreSQL", "Pydantic", "Jinja2", "CSS", "JavaScript", "LLM"],
+        "github": "https://github.com/robsonswe/praxis",
+        "preview": "",
+        "screenshot": "https://raw.githubusercontent.com/robsonswe/praxis/main/screenshot.png",
         "featured": false,
         "sorting_order": 1
     },
     {
         "id": 2,
         "name": {
-            "default": "MyShop"
+            "default": "Studora"
         },
         "description": {
-            "default": "MyShop is a functional prototype of an online store built with HTML, TailwindCSS, JavaScript, and React. It showcases essential features of a retail website, including product listings and responsive UI, focusing on core interactions and layout without backend integration.",
-            "pt": "O MyShop é um protótipo funcional de uma loja online, desenvolvido com HTML, TailwindCSS, JavaScript e React. Apresenta funcionalidades essenciais de um site de comércio, como listagem de produtos e uma interface responsiva, focando nas interações principais e no layout, sem integração com backend.",
-            "pt-br": "O MyShop é um protótipo funcional de uma loja online, desenvolvido com HTML, TailwindCSS, JavaScript e React. Apresenta funcionalidades essenciais de um site de comércio eletrônico, como listagem de produtos e uma interface responsiva, com foco nas interações principais e no layout, sem integração com backend."
+            "default": "Studora is a study platform for Brazilian public exams (concursos públicos) featuring question resolution, simulated exams, syllabus mapping, and performance tracking.",
+            "pt": "Studora é uma plataforma de estudos para concursos públicos com resolução de questões, simulados, mapa do edital e acompanhamento de desempenho.",
+            "pt-br": "Studora é uma plataforma de estudos para concursos públicos com resolução de questões, simulados, mapa do edital e acompanhamento de desempenho."
         },
-        "techs": ["HTML", "Tailwind", "JavaScript", "React"],
-        "github": "https://github.com/robsonswe/myshop",
-        "preview": "https://robsonswe.github.io/myshop/",
-        "screenshot": "https://raw.githubusercontent.com/robsonswe/myshop/refs/heads/main/screenshot-small.png",
+        "longDescription": {
+            "default": "Studora is a full-stack study platform for Brazilian public exams. The frontend is built with Next.js 16, TypeScript, and Tailwind CSS 4, featuring a question resolution flow with mandatory justification, simulated exams with per-question timers, syllabus coverage analysis with readiness scoring, and detailed performance analytics with daily consistency tracking and domain breakdown by subject. The backend is built with Java 17 and Spring Boot 3, providing a REST API with a structured question bank, hierarchical subject taxonomy, and answer recording. The project follows a content-first philosophy: correctness and structure before gamification.",
+            "pt": "Studora é uma plataforma full-stack de estudos para concursos públicos. O frontend é construído com Next.js 16, TypeScript e Tailwind CSS 4, oferecendo fluxo de resolução de questões com justificativa obrigatória, simulados com temporizador por questão, análise de cobertura do edital com pontuação de prontidão e análises detalhadas de desempenho com consistência diária e domínio por disciplina. O backend é construído com Java 17 e Spring Boot 3, fornecendo uma API REST com banco de questões estruturado, taxonomia hierárquica de conteúdo e registro de respostas. O projeto segue uma filosofia content-first: correção e estrutura antes de gamificação.",
+            "pt-br": "Studora é uma plataforma full-stack de estudos para concursos públicos. O frontend é construído com Next.js 16, TypeScript e Tailwind CSS 4, oferecendo fluxo de resolução de questões com justificativa obrigatória, simulados com temporizador por questão, análise de cobertura do edital com pontuação de prontidão e análises detalhadas de desempenho com consistência diária e domínio por disciplina. O backend é construído com Java 17 e Spring Boot 3, fornecendo uma API REST com banco de questões estruturado, taxonomia hierárquica de conteúdo e registro de respostas. O projeto segue uma filosofia content-first: correção e estrutura antes de gamificação."
+        },
+        "techs": ["Next.js", "TypeScript", "Tailwind CSS", "Java", "Spring Boot", "SQLite", "Recharts", "PostgreSQL"],
+        "github": "https://github.com/robsonswe/studora-frontend",
+        "preview": "",
+        "screenshot": "https://raw.githubusercontent.com/robsonswe/studora-frontend/main/screenshot.png",
         "featured": false,
         "sorting_order": 2
-    },
-    {
-        "id": 3,
-        "name": {
-            "default": "IP Address Tracker",
-            "pt": "Localizador de IPs",
-            "pt-br": "Localizador de IPs"
-        },
-        "description": {
-            "default": "IP Address Tracker is a project that provides information about IP addresses. The platform is built using HTML, CSS, and JavaScript and utilizes the LeafletJS library to map IP addresses visually.",
-            "pt": "IP Address Tracker é um projeto que fornece informações sobre endereços IP. A plataforma é construída usando HTML, CSS e JavaScript e utiliza a biblioteca LeafletJS para mapear visualmente os endereços IP.",
-            "pt-br": "IP Address Tracker é um projeto que fornece informações sobre endereços IP. A plataforma é construída usando HTML, CSS e JavaScript e utiliza a biblioteca LeafletJS para mapear visualmente os endereços IP."
-        },
-        "techs": ["HTML", "CSS", "Javascript"],
-        "github": "https://github.com/robsonswe/frontend-projects/tree/iptrack-int",
-        "preview": "https://robsonswe.github.io/frontend-projects/iptrack-int",
-        "screenshot": "https://robsonswe.github.io/frontend-projects/screenshots/iptrack-int.jpg",
-        "featured": false,
-        "sorting_order": 3
-    },
-    {
-        "id": 4,
-        "name": {
-            "default": "Shortly"
-        },
-        "description": {
-            "default": "Shortly is a project that provides a URL shortening solution. The platform is built using HTML, CSS, Sass, and React.",
-            "pt": "Shortly é um projeto que fornece uma solução de encurtamento de URLs. A plataforma é construída usando HTML, CSS, Sass e React.",
-            "pt-br": "Shortly é um projeto que fornece uma solução de encurtamento de URLs. A plataforma é construída usando HTML, CSS, Sass e React."
-        },
-        "techs": ["HTML", "CSS", "Sass", "React"],
-        "github": "https://github.com/robsonswe/frontend-projects/tree/linkshort-int",
-        "preview": "https://robsonswe.github.io/frontend-projects/linkshort-int",
-        "screenshot": "https://robsonswe.github.io/frontend-projects/screenshots/linkshort-int.jpg",
-        "featured": false,
-        "sorting_order": 4
     }
 ]

@@ -1,41 +1,26 @@
 {
   "about": {
     "title": "Sobre",
-    "subtitle": "sobre_mim",
     "paragraphs": [
-      "Sou Robson, um desenvolvedor focado em criar aplicações intuitivas e eficientes. Sou movido pela resolução de problemas, código limpo e pela entrega de experiências excepcionais ao usuário. Sempre disposto a me adaptar e crescer, levo valor e confiabilidade a cada projeto. Se você procura um desenvolvedor dedicado, entre em contato comigo."
+      "Trabalho com dados, desenvolvimento de software e infraestrutura. Gosto de colocar ideias em prática."
     ]
-  },
-  "hero": {
-    "titles": [
-      "Engenheiro de Software",
-      "Solucionador de Problemas"
-    ]
-  },
-  "contact": {
-    "title": "Contato"
   },
   "navbar": {
     "about": "Sobre",
     "skills": "Conhecimentos",
-    "projects": "Projetos",
-    "contact": "Contato",
-    "resume": "Currículo"
+    "projects": "Projetos"
   },
   "projects": {
     "title": "Projetos",
-    "frontend": "Projetos Frontend",
-    "repositories": "Repositórios",
-    "all": "Todos Projetos",
     "details": "Detalhes",
     "live": "Prévia",
     "source": "Código Fonte",
-    "prev": "Anterior",
-    "next": "Próximo"
-},
+    "featured": "Destaque"
+  },
   "skills": {
     "title": "Conhecimentos Técnicos",
     "languages": "Linguagens",
+    "frameworks": "Frameworks",
     "tools": "Ferramentas"
   }
 }

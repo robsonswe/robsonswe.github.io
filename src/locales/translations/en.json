@@ -1,37 +1,21 @@
 {
   "about": {
     "title": "About",
-    "subtitle": "about_me",
     "paragraphs": [
-      "I'm Robson, a developer focused on building intuitive and efficient applications. I’m driven by problem-solving, clean code, and delivering exceptional user experiences. Always eager to adapt and grow, I bring value and reliability to every project. If you’re looking for a dedicated developer, contact me."
+      "I work with data, software development, and infrastructure. I like putting ideas into practice."
     ]
-  },
-  "hero": {
-    "titles": [
-      "Software Engineer",
-      "Problem Solver"
-    ]
-  },
-  "contact": {
-    "title": "Contact"
   },
   "navbar": {
     "about": "About",
     "skills": "Skills",
-    "projects": "Projects",
-    "contact": "Contact",
-    "resume": "Resume"
+    "projects": "Projects"
   },
   "projects": {
     "title": "Projects",
-    "frontend": "Frontend Projects",
-    "repositories": "Repositories",
-    "all": "All Projects",
     "details": "Details",
     "live": "Preview",
     "source": "Source Code",
-    "prev": "Prev",
-    "next": "Next"
+    "featured": "Featured"
   },
   "skills": {
     "title": "Tech Skills",

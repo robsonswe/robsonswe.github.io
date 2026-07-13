@@ -1,82 +1,70 @@
 [
     {
-      "name": "HTML",
-      "iconname": "html",
-      "category": "language"
-    },
-    {
-      "name": "SQL",
-      "iconname": "sql",
-      "category": "language"
-    },
-    {
-      "name": "CSS",
-      "iconname": "css",
-      "category": "language"
-    },
-    {
-      "name": "Javascript",
-      "iconname": "javascript",
-      "category": "language"
-    },
-    {
-      "name": "Typescript",
-      "iconname": "typescript",
+      "name": "Java",
       "category": "language"
     },
     {
       "name": "Python",
-      "iconname": "python",
       "category": "language"
     },
     {
-      "name": "Sass",
-      "iconname": "sass",
-      "category": "framework"
+      "name": "JavaScript",
+      "category": "language"
     },
     {
-      "name": "Tailwind",
-      "iconname": "tailwind",
-      "category": "framework"
+      "name": "TypeScript",
+      "category": "language"
     },
     {
-      "name": "ExpressJS",
-      "iconname": "expressjs",
-      "category": "framework"
+      "name": "HTML",
+      "category": "language"
     },
     {
-      "name": "NextJS",
-      "iconname": "nextjs",
-      "category": "framework"
+      "name": "CSS",
+      "category": "language"
+    },
+    {
+      "name": "SQL",
+      "category": "language"
     },
     {
       "name": "React",
-      "iconname": "reactjs",
       "category": "framework"
     },
     {
-      "name": "NodeJS",
-      "iconname": "nodejs",
-      "category": "tool"
+      "name": "Next.js",
+      "category": "framework"
     },
     {
-      "name": "PostgresSQL",
-      "iconname": "postgres",
-      "category": "tool"
+      "name": "Node.js",
+      "category": "framework"
     },
     {
-      "name": "MySQL",
-      "iconname": "mysql",
-      "category": "tool"
+      "name": "TailwindCSS",
+      "category": "framework"
     },
     {
       "name": "Git",
-      "iconname": "git",
       "category": "tool"
     },
     {
       "name": "Docker",
-      "iconname": "docker",
+      "category": "tool"
+    },
+    {
+      "name": "PostgreSQL",
+      "category": "tool"
+    },
+    {
+      "name": "SQLite",
+      "category": "tool"
+    },
+    {
+      "name": "MongoDB",
+      "category": "tool"
+    },
+    {
+      "name": "Google Cloud Platform",
       "category": "tool"
     }
   ]
